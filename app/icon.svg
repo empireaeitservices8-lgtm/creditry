@@ -1,0 +1,29 @@
+<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#C88A00" />
+      <stop offset="50%" stopColor="#F2C14E" />
+      <stop offset="100%" stopColor="#B87900" />
+    </linearGradient>
+    <linearGradient id="favGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#075B42" />
+      <stop offset="100%" stopColor="#003F2D" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" stroke="url(#favGold)" stroke-width="3" fill="#FFFDF9" />
+  <circle cx="60" cy="60" r="50" stroke="url(#favGold)" stroke-width="1" stroke-opacity="0.6" />
+  <rect x="34" y="72" width="7" height="14" rx="1.5" fill="url(#favGold)" />
+  <rect x="44" y="65" width="7" height="21" rx="1.5" fill="url(#favGreen)" />
+  <rect x="54" y="56" width="7" height="30" rx="1.5" fill="url(#favGold)" />
+  <rect x="64" y="48" width="7" height="38" rx="1.5" fill="url(#favGreen)" />
+  <rect x="74" y="40" width="7" height="46" rx="1.5" fill="url(#favGold)" />
+  <path d="M28 86.5H92" stroke="url(#favGold)" stroke-width="2" stroke-linecap="round" />
+  <path d="M59 86V60C59 55 53 49 46 47C53 50 57 56 59 62V55C59 51 64 45 74 44C66 47 62 52 61 60V86H59Z" fill="#003F2D" />
+  <path d="M44 46C38 43 36 34 44 33C50 37 47 43 44 46Z" fill="#075B42" />
+  <path d="M51 36C47 30 52 24 57 26C59 32 54 35 51 36Z" fill="url(#favGold)" />
+  <path d="M60 22C56 28 64 34 60 40C62 33 67 27 60 22Z" fill="#003F2D" />
+  <path d="M68 33C65 26 73 24 76 29C77 34 71 36 68 33Z" fill="url(#favGold)" />
+  <path d="M74 42C79 38 85 41 84 48C78 47 75 44 74 42Z" fill="#075B42" />
+  <path d="M32 78C44 68 62 52 82 34" stroke="url(#favGold)" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M72 32H83V43" stroke="url(#favGold)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credtree Financial Services | Loans, Insurance & Wealth Management</title>
+  <meta name="description" content="Credtree Financial Services facilitates loans, insurance, investment and wealth management services in Kannur." />
+  
+  <!-- Google Fonts: Playfair Display & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              900: "#002D22",
+              800: "#003F2D",
+              700: "#075B42",
+              600: "#0D6E51",
+              500: "#138563",
+              100: "#E3ECE8",
+              50: "#F0F5F2",
+            },
+            gold: {
+              900: "#8F5E00",
+              800: "#B87900",
+              700: "#C88A00",
+              600: "#D9A62A",
+              500: "#E5B83E",
+              400: "#F2C14E",
+              300: "#F8D67F",
+              100: "#FCF3D9",
+              50: "#FEFBF0",
+            },
+            ivory: {
+              DEFAULT: "#FBF7F0",
+              light: "#FFFDF9",
+              dark: "#F4EDE0",
+            },
+            charcoal: {
+              900: "#17201C",
+              800: "#24322C",
+              700: "#384A42",
+              600: "#50655B",
+              500: "#70847B",
+              400: "#98A8A0",
+            }
+          },
+          fontFamily: {
+            serif: ["'Playfair Display'", "Georgia", "serif"],
+            sans: ["'Manrope'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+          },
+          backgroundImage: {
+            "gold-gradient": "linear-gradient(135deg, #C88A00 0%, #F2C14E 50%, #B87900 100%)",
+            "forest-gradient": "linear-gradient(180deg, #003F2D 0%, #002D22 100%)",
+          },
+          boxShadow: {
+            "gold-subtle": "0 4px 20px -2px rgba(200, 138, 0, 0.15)",
+            "gold-hover": "0 10px 30px -4px rgba(200, 138, 0, 0.25)",
+            "card-luxury": "0 12px 36px -8px rgba(0, 45, 34, 0.08)",
+            "card-hover": "0 20px 40px -10px rgba(0, 45, 34, 0.14)",
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FBF7F0;
+      color: #17201C;
+      font-family: 'Manrope', sans-serif;
+      overflow-x: hidden;
+    }
+    ::selection {
+      background-color: #C88A00;
+      color: #FFFFFF;
+    }
+    @keyframes heroRingPulse {
+      0%, 100% { transform: scale(1); opacity: 0.35; }
+      50% { transform: scale(1.02); opacity: 0.6; }
+    }
+    @keyframes heroFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes heroBarGrow {
+      0% { transform: scaleY(0); opacity: 0; }
+      100% { transform: scaleY(1); opacity: 1; }
+    }
+    @keyframes heroArrowDraw {
+      0% { stroke-dashoffset: 300; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-ring-pulse { animation: heroRingPulse 7s ease-in-out infinite; }
+    .hero-float-slow { animation: heroFloat 5s ease-in-out infinite; }
+    .hero-bar-1, .hero-bar-2, .hero-bar-3 {
+      transform-origin: bottom;
+      animation: heroBarGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hero-bar-1 { animation-delay: 0.15s; }
+    .hero-bar-2 { animation-delay: 0.3s; }
+    .hero-bar-3 { animation-delay: 0.45s; }
+    .hero-tree-trunk { animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards; }
+    .hero-leaves { animation: heroFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s backwards; }
+    .hero-arrow-path {
+      stroke-dasharray: 300;
+      animation: heroArrowDraw 1.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased">
+
+  <!-- =======================================================
+       1. HEADER / NAVIGATION
+       ======================================================= -->
+  <header id="main-header" class="sticky top-0 z-50 w-full transition-all duration-300 bg-ivory border-b border-gold-700/10 py-4 sm:py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo matching reference (CRED in green, TREE in gold) -->
+        <a href="#home" class="group inline-flex items-center gap-3.5 no-underline transition-opacity hover:opacity-95" aria-label="Credtree Financial Services Home">
+          <!-- Vector Emblem reproducing exact reference logo -->
+          <svg viewBox="0 0 200 200" class="w-12 h-12 shrink-0 transition-transform duration-300 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#C88A00" />
+                <stop offset="35%" stop-color="#F2C14E" />
+                <stop offset="70%" stop-color="#D9A62A" />
+                <stop offset="100%" stop-color="#B87900" />
+              </linearGradient>
+            </defs>
+            <!-- Tapering gold ring -->
+            <path d="M 40 148 C 16 112 22 58 64 30 C 104 4 162 14 186 54 C 206 88 196 132 166 156" stroke="url(#navGold)" stroke-width="6" stroke-linecap="round" fill="none" />
+            <path d="M 48 140 C 28 110 34 66 68 42 C 102 20 150 28 172 62 C 188 90 180 126 156 146" stroke="url(#navGold)" stroke-width="1.5" stroke-opacity="0.75" stroke-linecap="round" fill="none" />
+            <!-- Arched green base -->
+            <path d="M 32 168 C 70 152 130 152 168 168 C 130 158 70 158 32 168 Z" fill="#002D22" />
+            <!-- 3 Bars -->
+            <rect x="102" y="126" width="11" height="32" rx="2" fill="#002D22" />
+            <rect x="117" y="108" width="11" height="50" rx="2" fill="#002D22" />
+            <rect x="132" y="88" width="12" height="70" rx="2" fill="#002D22" />
+            <!-- Trunk & foliage -->
+            <path d="M 78 160 C 86 140 88 114 96 90 C 88 98 78 106 66 108 C 76 102 84 94 88 84 C 94 92 102 96 114 94 C 104 90 98 84 96 74 C 98 84 104 90 110 92 C 102 110 98 136 86 160 Z" fill="#002D22" />
+            <circle cx="96" cy="76" r="5.5" fill="url(#navGold)" />
+            <path d="M 68 76 C 58 72 56 60 66 58 C 74 64 72 72 68 76 Z" fill="#075B42" />
+            <path d="M 58 92 C 48 88 48 78 56 76 C 64 80 62 88 58 92 Z" fill="#075B42" />
+            <path d="M 72 104 C 64 102 62 94 70 92 C 76 96 74 102 72 104 Z" fill="#075B42" />
+            <path d="M 82 62 C 76 54 82 46 90 48 C 92 56 86 60 82 62 Z" fill="#075B42" />
+            <path d="M 102 44 C 98 34 108 30 112 36 C 114 44 106 46 102 44 Z" fill="url(#navGold)" />
+            <path d="M 124 58 C 118 50 126 44 132 48 C 134 56 128 60 124 58 Z" fill="url(#navGold)" />
+            <path d="M 112 70 C 106 64 114 56 120 60 C 122 66 116 70 112 70 Z" fill="url(#navGold)" />
+            <path d="M 128 72 C 124 64 132 58 138 62 C 140 70 134 74 128 72 Z" fill="#075B42" />
+            <!-- Upward Gold Arrow -->
+            <path d="M 88 160 C 104 146 126 122 152 74" stroke="url(#navGold)" stroke-width="4.5" stroke-linecap="round" />
+            <path d="M 140 76 L 154 70 L 158 86" stroke="url(#navGold)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          <!-- Wordmark with green CRED and gold TREE -->
+          <div class="flex flex-col text-left">
+            <span class="font-serif tracking-[0.14em] font-bold uppercase text-lg leading-tight">
+              <span class="text-forest-800">CRED</span><span class="text-gold-600">TREE</span>
+            </span>
+            <div class="flex items-center gap-1.5 my-0.5">
+              <span class="h-[1px] w-5 bg-gradient-to-r from-gold-700 via-gold-400 to-transparent"></span>
+              <span class="w-1 h-1 rotate-45 bg-gold-600"></span>
+              <span class="h-[1px] flex-1 max-w-[32px] bg-gradient-to-l from-gold-700 via-gold-400 to-transparent"></span>
+            </div>
+            <span class="font-sans tracking-[0.24em] uppercase font-bold text-[9px] leading-tight text-charcoal-700">
+              FINANCIAL SERVICES
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation aligned to right -->
+        <nav class="hidden lg:flex items-center space-x-2 xl:space-x-4 ml-auto">
+          <a href="#home" class="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors hover:text-gold-700 rounded-md">Home</a>
+          <a href="#about" class="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors hover:text-gold-700 rounded-md">About</a>
+          <a href="#services" class="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors hover:text-gold-700 rounded-md">Services</a>
+          <a href="#solutions" class="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors hover:text-gold-700 rounded-md">Solutions</a>
+          <a href="#why-credtree" class="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors hover:text-gold-700 rounded-md">Why Credtree</a>
+          <a href="#contact" class="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors hover:text-gold-700 rounded-md">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex lg:hidden items-center gap-2">
+          <a href="tel:9778484739" class="p-2 rounded-full bg-forest-800/10 text-forest-800">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+          <button id="mobile-toggle" type="button" class="p-2 rounded-md text-forest-900 hover:bg-forest-50" aria-label="Toggle Navigation">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Slideout Menu -->
+    <div id="mobile-drawer" class="fixed inset-0 z-40 bg-forest-900/60 backdrop-blur-sm hidden">
+      <div class="fixed top-0 right-0 bottom-0 w-full max-w-xs bg-ivory shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-gold-600/20">
+            <span class="font-serif font-bold text-forest-900"><span class="text-forest-800">CRED</span><span class="text-gold-600">TREE</span></span>
+            <button id="mobile-close" class="p-2 rounded-full text-forest-900 hover:bg-forest-50">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="mt-4 py-2 border-b border-gold-600/10 text-xs text-charcoal-600">
+            <p class="font-semibold text-forest-800">Brijesh Gangadharan</p>
+            <p class="text-[11px] text-gold-800 uppercase tracking-wider">Business Associate &bull; Kannur</p>
+          </div>
+          <nav class="mt-6 flex flex-col space-y-1">
+            <a href="#home" class="mobile-nav-link flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50">Home</a>
+            <a href="#about" class="mobile-nav-link flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50">About</a>
+            <a href="#services" class="mobile-nav-link flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50">Services</a>
+            <a href="#solutions" class="mobile-nav-link flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50">Solutions</a>
+            <a href="#why-credtree" class="mobile-nav-link flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50">Why Credtree</a>
+            <a href="#contact" class="mobile-nav-link flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50">Contact</a>
+          </nav>
+        </div>
+        <div class="pt-6 border-t border-gold-600/20 space-y-3">
+          <a href="tel:9778484739" class="flex items-center justify-center gap-2.5 w-full py-3 px-4 rounded-lg bg-forest-800 text-ivory font-semibold text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>
+            <span>Talk to Us: 9778484739</span>
+          </a>
+          <a href="https://wa.me/919778484739" target="_blank" class="flex items-center justify-center gap-2.5 w-full py-2.5 px-4 rounded-lg bg-white text-forest-800 font-semibold text-sm border border-gold-500/40">
+            <i data-lucide="message-square" class="w-4 h-4 text-green-700"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================
+       2. HERO SECTION (Standalone Explore Services Button)
+       ======================================================= -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-ivory via-ivory-light to-ivory py-16 sm:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy -->
+        <div class="lg:col-span-7 text-left space-y-6 lg:pr-6">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-forest-800/10 border border-gold-600/30 text-forest-800 text-xs font-semibold tracking-[0.18em] uppercase">
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+            <span>Credtree Financial Services</span>
+            <span class="text-gold-700">&bull;</span>
+            <span>Kannur</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-forest-900 tracking-tight leading-[1.12]">
+            Where Credit Meets <span class="relative inline-block text-forest-800">Growth &amp; Security</span>
+          </h1>
+
+          <p class="font-serif italic text-lg sm:text-xl lg:text-2xl text-gold-800 font-medium leading-snug">
+            Smart financial solutions for loans, insurance, investments and wealth management.
+          </p>
+
+          <p class="text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal max-w-2xl">
+            Helping individuals and businesses explore financial solutions with clarity, confidence and care. Facilitating credit avenues and financial protection tailored to your long-term roadmap.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="grid grid-cols-3 gap-3 pt-2 max-w-lg">
+            <div class="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-forest-700 shrink-0"></i>
+              <span class="text-xs font-semibold text-forest-900">Clarity</span>
+            </div>
+            <div class="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-forest-700 shrink-0"></i>
+              <span class="text-xs font-semibold text-forest-900">Confidence</span>
+            </div>
+            <div class="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-forest-700 shrink-0"></i>
+              <span class="text-xs font-semibold text-forest-900">Care</span>
+            </div>
+          </div>
+
+          <!-- Buttons: Only Explore Our Services Button -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <a href="#services" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-forest-800 text-ivory text-base font-semibold tracking-wide shadow-card-luxury hover:bg-forest-900 border border-gold-600/40 transition-all duration-200 group">
+              <span>Explore Our Services</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-gold-400 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Associate Card -->
+          <div class="pt-4 border-t border-gold-600/20 max-w-md">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-forest-800 text-gold-400 font-serif font-bold flex items-center justify-center border border-gold-500/50 shadow-sm">
+                  BG
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-forest-900">Brijesh Gangadharan</h3>
+                  <p class="text-xs text-gold-800 font-medium">Business Associate &bull; Credtree Kannur</p>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] uppercase tracking-wider text-charcoal-500 block">Direct Enquiries</span>
+                <a href="tel:9778484739" class="text-xs font-semibold text-forest-800 hover:text-gold-700">9778484739</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Animated Hero Visual -->
+        <div class="lg:col-span-5 flex justify-center items-center">
+          <div class="relative w-full max-w-[480px] aspect-square mx-auto flex items-center justify-center p-4">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-gold-400/15 via-forest-700/10 to-transparent blur-3xl -z-10"></div>
+            <div class="absolute inset-4 rounded-full border border-gold-600/25 hero-ring-pulse"></div>
+            <div class="absolute inset-8 rounded-full border border-dashed border-gold-600/35"></div>
+
+            <svg viewBox="0 0 200 200" class="w-full h-full max-w-[420px] drop-shadow-2xl" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#C88A00" />
+                  <stop offset="35%" stop-color="#F2C14E" />
+                  <stop offset="70%" stop-color="#D9A62A" />
+                  <stop offset="100%" stop-color="#B87900" />
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="90" fill="#FFFDF9" stroke="url(#hGold)" stroke-width="1.5" />
+              <!-- Tapering gold ring -->
+              <path d="M 40 148 C 16 112 22 58 64 30 C 104 4 162 14 186 54 C 206 88 196 132 166 156" stroke="url(#hGold)" stroke-width="5.5" stroke-linecap="round" fill="none" />
+              <!-- Arched green base -->
+              <path d="M 32 168 C 70 152 130 152 168 168 C 130 158 70 158 32 168 Z" fill="#002D22" />
+              <!-- 3 Bars -->
+              <rect class="hero-bar-1" x="102" y="126" width="11" height="32" rx="2" fill="#002D22" />
+              <rect class="hero-bar-2" x="117" y="108" width="11" height="50" rx="2" fill="#002D22" />
+              <rect class="hero-bar-3" x="132" y="88" width="12" height="70" rx="2" fill="#002D22" />
+              <!-- Trunk -->
+              <path class="hero-tree-trunk" d="M 78 160 C 86 140 88 114 96 90 C 88 98 78 106 66 108 C 76 102 84 94 88 84 C 94 92 102 96 114 94 C 104 90 98 84 96 74 C 98 84 104 90 110 92 C 102 110 98 136 86 160 Z" fill="#002D22" />
+              <circle cx="96" cy="76" r="5.5" fill="url(#hGold)" />
+              <!-- Foliage -->
+              <g class="hero-leaves">
+                <path d="M 68 76 C 58 72 56 60 66 58 C 74 64 72 72 68 76 Z" fill="#075B42" />
+                <path d="M 58 92 C 48 88 48 78 56 76 C 64 80 62 88 58 92 Z" fill="#075B42" />
+                <path d="M 72 104 C 64 102 62 94 70 92 C 76 96 74 102 72 104 Z" fill="#075B42" />
+                <path d="M 82 62 C 76 54 82 46 90 48 C 92 56 86 60 82 62 Z" fill="#075B42" />
+                <path d="M 102 44 C 98 34 108 30 112 36 C 114 44 106 46 102 44 Z" fill="url(#hGold)" />
+                <path d="M 124 58 C 118 50 126 44 132 48 C 134 56 128 60 124 58 Z" fill="url(#hGold)" />
+                <path d="M 112 70 C 106 64 114 56 120 60 C 122 66 116 70 112 70 Z" fill="url(#hGold)" />
+                <path d="M 128 72 C 124 64 132 58 138 62 C 140 70 134 74 128 72 Z" fill="#075B42" />
+              </g>
+              <!-- Arrow -->
+              <path class="hero-arrow-path" d="M 88 160 C 104 146 126 122 152 74" stroke="url(#hGold)" stroke-width="4.5" stroke-linecap="round" />
+              <path d="M 140 76 L 154 70 L 158 86" stroke="url(#hGold)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       3. ABOUT CREDTREE (With Business Card Representation)
+       ======================================================= -->
+  <section id="about" class="py-20 sm:py-24 bg-ivory relative overflow-hidden border-t border-gold-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full text-xs font-semibold tracking-[0.2em] uppercase bg-forest-50 text-forest-800 border border-forest-100">
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+          <span>About Our Facilitation</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-900">
+          Financial Solutions Built Around Your Goals
+        </h2>
+        <div class="flex items-center justify-center gap-2.5 my-4 max-w-[200px] mx-auto">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"></span>
+        </div>
+        <p class="text-base sm:text-lg text-charcoal-700">Where Credit Meets Growth &amp; Security</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        <!-- Left: Official Business Card Representation -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl bg-[#FFFDF9] border border-gold-600/40 shadow-card-luxury p-6 sm:p-8 overflow-hidden">
+            <!-- Signature Dark Green Swoosh Wave with Double Gold Trim -->
+            <div class="absolute -bottom-8 -right-8 w-48 sm:w-56 h-48 sm:h-56 pointer-events-none">
+              <svg viewBox="0 0 200 200" class="w-full h-full" fill="none">
+                <path d="M 50 200 C 60 140 120 100 200 80 L 200 200 Z" fill="#002D22" />
+                <path d="M 48 200 C 58 138 118 98 200 78" stroke="#C88A00" stroke-width="5" />
+                <path d="M 52 200 C 62 144 122 104 200 84" stroke="#F2C14E" stroke-width="1.5" />
+              </svg>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+              <!-- Left: Logo & Tagline -->
+              <div class="sm:col-span-5">
+                <span class="font-serif font-bold text-xl tracking-wider block">
+                  <span class="text-forest-800">CRED</span><span class="text-gold-600">TREE</span>
+                </span>
+                <span class="text-[9px] font-bold uppercase tracking-[0.24em] text-charcoal-700 block mt-0.5">
+                  FINANCIAL SERVICES
+                </span>
+                <p class="font-serif italic text-xs text-forest-800 font-semibold mt-3">
+                  Where Credit Meets Growth &amp; Security
+                </p>
+              </div>
+
+              <!-- Vertical Gold Divider -->
+              <div class="hidden sm:flex sm:col-span-1 justify-center items-center h-full min-h-[130px]">
+                <div class="flex flex-col items-center">
+                  <span class="w-[1px] h-12 bg-gold-600/50"></span>
+                  <span class="w-2 h-2 rotate-45 bg-gold-600 my-1"></span>
+                  <span class="w-[1px] h-12 bg-gold-600/50"></span>
+                </div>
+              </div>
+
+              <!-- Right: Associate Details -->
+              <div class="sm:col-span-6 space-y-2">
+                <h4 class="font-serif text-lg sm:text-xl font-bold text-forest-900">Brijesh Gangadharan</h4>
+                <p class="text-xs font-semibold text-gold-800 uppercase tracking-wider">Business Associate</p>
+                <div class="space-y-1 pt-1 text-xs">
+                  <p class="text-charcoal-700 flex items-center gap-2">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-700"></i>
+                    <span>+91 97784 84739</span>
+                  </p>
+                  <p class="text-charcoal-700 flex items-center gap-2">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-700"></i>
+                    <span>info@credtree.in</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative z-10 mt-6 pt-3 border-t border-gold-600/15 flex items-center justify-between text-[11px] text-charcoal-600">
+              <span>Ground Floor, Kamath Building, SN Park, Kannur - 1</span>
+              <span class="font-semibold text-forest-800">www.credtree.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text Narrative Founded on Business Objective -->
+        <div class="lg:col-span-6 space-y-6">
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-900 leading-tight">
+            Dedicated Financial Facilitation with Integrity and Precision
+          </h3>
+          <p class="text-base text-charcoal-700 leading-relaxed">
+            At <strong>Credtree Financial Services</strong>, we act as a trusted bridge between your financial goals and the broader ecosystem of financial institutions. Our operational foundation is built directly on the official objective:
+          </p>
+          <div class="p-5 rounded-xl bg-white border-l-4 border-gold-600 shadow-sm space-y-2">
+            <p class="text-xs font-bold uppercase tracking-wider text-gold-800">1. Business Objective</p>
+            <p class="text-sm text-forest-900 italic font-medium leading-relaxed">
+              &ldquo;To facilitate secured and unsecured loans including home loans, personal loans, car loans, loans against property and business loans, and to distribute financial products such as credit cards, all class of insurance products, investment and wealth management services.&rdquo;
+            </p>
+          </div>
+          <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
+            Whether you are seeking secured borrowing for home ownership, commercial lines to support enterprise scaling, multi-class risk protection, or long-term wealth planning, Credtree provides disciplined personal attention at every stage.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       4. PRIMARY SERVICES (Exact 4 Icons from Reference Card Back)
+       ======================================================= -->
+  <section id="services" class="py-20 sm:py-24 bg-ivory-light border-t border-gold-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full text-xs font-semibold tracking-[0.2em] uppercase bg-forest-50 text-forest-800 border border-forest-100">
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+          <span>Our Financial Services</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          <span class="text-forest-900">Simplifying Loans, </span>
+          <span class="text-gold-700">Insurance &amp; Investments</span>
+        </h2>
+        <div class="flex items-center justify-center gap-2.5 my-5 max-w-[220px] mx-auto">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"></span>
+          <span class="w-2 h-2 rotate-45 bg-gold-600 shadow-sm"></span>
+          <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"></span>
+        </div>
+      </div>
+
+      <!-- 4 Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        
+        <!-- 1. Home Loan (Green House + Gold Roof) -->
+        <div class="group relative flex flex-col justify-between p-8 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2 flex items-center justify-center">
+                <svg viewBox="0 0 64 64" class="w-full h-full" fill="none">
+                  <rect x="42" y="16" width="6" height="12" fill="#C88A00" rx="1" />
+                  <rect x="16" y="28" width="32" height="26" fill="#003F2D" rx="2" />
+                  <polygon points="32,8 10,28 54,28" fill="#C88A00" stroke="#B87900" stroke-width="1.5" />
+                  <rect x="22" y="34" width="7" height="7" fill="#FFFFFF" rx="1" />
+                  <rect x="35" y="36" width="8" height="18" fill="#FFFFFF" rx="1" />
+                </svg>
+              </div>
+              <span class="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500">01</span>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
+              Secured Credit
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">HOME LOAN</h3>
+            <p class="mt-3 text-sm text-charcoal-700 leading-relaxed font-normal">
+              &ldquo;Financial assistance for your home ownership journey.&rdquo;
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Request Guidance &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+
+        <!-- 2. Business Loan (Green Briefcase + Gold Latch) -->
+        <div class="group relative flex flex-col justify-between p-8 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2 flex items-center justify-center">
+                <svg viewBox="0 0 64 64" class="w-full h-full" fill="none">
+                  <path d="M24 18 C24 12 40 12 40 18" stroke="#C88A00" stroke-width="3" stroke-linecap="round" />
+                  <rect x="12" y="18" width="40" height="32" rx="4" fill="#003F2D" />
+                  <path d="M12 28 L32 38 L52 28" stroke="#C88A00" stroke-width="1.5" />
+                  <rect x="29" y="34" width="6" height="7" rx="1.5" fill="#F2C14E" stroke="#C88A00" stroke-width="1" />
+                </svg>
+              </div>
+              <span class="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500">02</span>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
+              Enterprise Growth
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">BUSINESS LOAN</h3>
+            <p class="mt-3 text-sm text-charcoal-700 leading-relaxed font-normal">
+              &ldquo;Financial solutions designed to support business needs and growth.&rdquo;
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Request Guidance &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+
+        <!-- 3. Insurance (Gold Shield + Family) -->
+        <div class="group relative flex flex-col justify-between p-8 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2 flex items-center justify-center">
+                <svg viewBox="0 0 64 64" class="w-full h-full" fill="none">
+                  <path d="M32 8 C46 8 50 16 50 28 C50 42 32 54 32 54 C32 54 14 42 14 28 C14 16 18 8 32 8 Z" fill="#C88A00" />
+                  <path d="M32 11 C43 11 46 18 46 28 C46 39 32 49 32 49 C32 49 18 39 18 28 C18 18 21 11 32 11 Z" fill="#F2C14E" />
+                  <circle cx="26" cy="22" r="2.5" fill="#003F2D" />
+                  <path d="M22 36 V29 C22 26 30 26 30 29 V36 Z" fill="#003F2D" />
+                  <circle cx="38" cy="22" r="2.5" fill="#003F2D" />
+                  <path d="M34 36 V29 C34 26 42 26 42 29 V36 Z" fill="#003F2D" />
+                  <circle cx="32" cy="28" r="2" fill="#003F2D" />
+                  <path d="M29 38 V33 C29 31 35 31 35 33 V38 Z" fill="#003F2D" />
+                </svg>
+              </div>
+              <span class="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500">03</span>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
+              Risk Protection
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">INSURANCE</h3>
+            <p class="mt-3 text-sm text-charcoal-700 leading-relaxed font-normal">
+              &ldquo;Insurance solutions designed to help protect what matters.&rdquo;
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Request Guidance &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+
+        <!-- 4. Wealth Management (Green Bars + Gold Arrow) -->
+        <div class="group relative flex flex-col justify-between p-8 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2 flex items-center justify-center">
+                <svg viewBox="0 0 64 64" class="w-full h-full" fill="none">
+                  <line x1="12" y1="50" x2="52" y2="50" stroke="#C88A00" stroke-width="2" stroke-linecap="round" />
+                  <rect x="16" y="42" width="6" height="8" rx="1" fill="#003F2D" />
+                  <rect x="25" y="34" width="6" height="16" rx="1" fill="#003F2D" />
+                  <rect x="34" y="26" width="6" height="24" rx="1" fill="#003F2D" />
+                  <rect x="43" y="18" width="6" height="32" rx="1" fill="#003F2D" />
+                  <path d="M14 44 C26 38 34 26 48 14" stroke="#F2C14E" stroke-width="3" stroke-linecap="round" />
+                  <path d="M38 14 L49 13 L47 24" stroke="#F2C14E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500">04</span>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
+              Long-Term Growth
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">WEALTH MANAGEMENT</h3>
+            <p class="mt-3 text-sm text-charcoal-700 leading-relaxed font-normal">
+              &ldquo;Investment and wealth management services focused on long-term financial planning.&rdquo;
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Request Guidance &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       5. BROADER SOLUTIONS (Exact 9 Items)
+       ======================================================= -->
+  <section id="solutions" class="py-20 sm:py-24 bg-ivory border-t border-gold-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full text-xs font-semibold tracking-[0.2em] uppercase bg-forest-50 text-forest-800 border border-forest-100">
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+          <span>Complete Portfolio</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-900">
+          Explore Our Financial Solutions
+        </h2>
+        <div class="flex items-center justify-center gap-2.5 my-4 max-w-[200px] mx-auto">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"></span>
+        </div>
+        <p class="text-base sm:text-lg text-charcoal-700">
+          Facilitation across the complete spectrum of credit, protection, and investment distribution
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Secured Lending</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">HOME LOANS</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Facilitating financial solutions for new purchases, plot purchases, and construction.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Unsecured Lending</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">PERSONAL LOANS</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Flexible credit facilitation to support immediate personal financial requirements.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Secured Lending</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">CAR LOANS</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Structured vehicle finance options tailored to personal and commercial needs.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Secured Lending</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">LOANS AGAINST PROPERTY</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Unlocking liquidity from residential or commercial real estate assets.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Commercial Credit</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">BUSINESS LOANS</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Supportive financial lines designed to empower enterprise stability and scaling.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Financial Products</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">CREDIT CARDS</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Distribution of curated cards aligned with your transaction and lifestyle patterns.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Protection Services</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">INSURANCE PRODUCTS</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Facilitating multi-class insurance products for families, health, vehicles, and assets.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Capital Planning</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">INVESTMENT SERVICES</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Guidance on curated investment avenues tailored for sustainable financial goals.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-semibold uppercase text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">Advisory Distribution</span>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-forest-900 mt-3">WEALTH MANAGEMENT</h3>
+            <p class="mt-2 text-xs sm:text-sm text-charcoal-600">Holistic wealth facilitation prioritizing disciplined, long-term asset growth.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between text-xs font-semibold text-forest-800">
+            <a href="#contact" class="hover:text-gold-700">Enquire Option &rarr;</a>
+            <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       6. HOW WE HELP (4-Step Process)
+       ======================================================= -->
+  <section class="py-20 sm:py-24 bg-ivory-light border-t border-gold-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full text-xs font-semibold tracking-[0.2em] uppercase bg-forest-50 text-forest-800 border border-forest-100">
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+          <span>Our Process</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-900">
+          How We Help
+        </h2>
+        <div class="flex items-center justify-center gap-2.5 my-4 max-w-[200px] mx-auto">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"></span>
+        </div>
+        <p class="text-base sm:text-lg text-charcoal-700">
+          A structured, transparent pathway designed around your requirements
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury">
+          <div class="flex items-center justify-between mb-6">
+            <span class="w-12 h-12 rounded-full bg-forest-800 text-gold-400 font-serif font-bold text-lg flex items-center justify-center border border-gold-500/40">01</span>
+            <i data-lucide="compass" class="w-5 h-5 text-forest-800"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest-900">UNDERSTAND</h3>
+          <p class="mt-3 text-sm text-forest-800 font-medium">&ldquo;Understand the customer's financial requirement.&rdquo;</p>
+          <p class="mt-2 text-xs text-charcoal-600">We listen to evaluate your specific circumstances, timeframes, and goals.</p>
+        </div>
+        <div class="p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury">
+          <div class="flex items-center justify-between mb-6">
+            <span class="w-12 h-12 rounded-full bg-forest-800 text-gold-400 font-serif font-bold text-lg flex items-center justify-center border border-gold-500/40">02</span>
+            <i data-lucide="sparkles" class="w-5 h-5 text-forest-800"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest-900">EXPLORE</h3>
+          <p class="mt-3 text-sm text-forest-800 font-medium">&ldquo;Explore suitable financial product options.&rdquo;</p>
+          <p class="mt-2 text-xs text-charcoal-600">We evaluate the appropriate product categories matching your profile.</p>
+        </div>
+        <div class="p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury">
+          <div class="flex items-center justify-between mb-6">
+            <span class="w-12 h-12 rounded-full bg-forest-800 text-gold-400 font-serif font-bold text-lg flex items-center justify-center border border-gold-500/40">03</span>
+            <i data-lucide="shield-check" class="w-5 h-5 text-forest-800"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest-900">FACILITATE</h3>
+          <p class="mt-3 text-sm text-forest-800 font-medium">&ldquo;Facilitate the relevant financial service or product.&rdquo;</p>
+          <p class="mt-2 text-xs text-charcoal-600">We coordinate the procedural steps and documentation requirements with clarity.</p>
+        </div>
+        <div class="p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury">
+          <div class="flex items-center justify-between mb-6">
+            <span class="w-12 h-12 rounded-full bg-forest-800 text-gold-400 font-serif font-bold text-lg flex items-center justify-center border border-gold-500/40">04</span>
+            <i data-lucide="sprout" class="w-5 h-5 text-forest-800"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest-900">GROW</h3>
+          <p class="mt-3 text-sm text-forest-800 font-medium">&ldquo;Support the customer's broader financial journey.&rdquo;</p>
+          <p class="mt-2 text-xs text-charcoal-600">We remain your ongoing point of contact as your enterprise or family milestones expand.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       7. WHY CREDTREE
+       ======================================================= -->
+  <section id="why-credtree" class="py-20 sm:py-24 bg-ivory border-t border-gold-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full text-xs font-semibold tracking-[0.2em] uppercase bg-forest-50 text-forest-800 border border-forest-100">
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+          <span>Our Foundation</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-900">
+          Why Credtree?
+        </h2>
+        <div class="flex items-center justify-center gap-2.5 my-4 max-w-[200px] mx-auto">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"></span>
+        </div>
+        <p class="text-base sm:text-lg text-charcoal-700">
+          Grounded in institutional diligence, direct accountability, and long-term financial thinking
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <div class="p-8 rounded-2xl bg-white border border-gold-600/25 shadow-card-luxury flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-forest-800 text-gold-400 flex items-center justify-center">
+                <i data-lucide="layers" class="w-6 h-6 text-gold-500"></i>
+              </div>
+              <span class="font-serif text-sm font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">Pillar 01</span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">MULTIPLE FINANCIAL SOLUTIONS</h3>
+            <p class="mt-3 text-base text-charcoal-700 leading-relaxed">&ldquo;Loans, insurance, investment and wealth management services in one place.&rdquo;</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-forest-50 flex items-center gap-2 text-xs text-forest-800 font-medium">
+            <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+            <span>Facilitation across credit, risk coverage, and capital planning.</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white border border-gold-600/25 shadow-card-luxury flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-forest-800 text-gold-400 flex items-center justify-center">
+                <i data-lucide="user-check" class="w-6 h-6 text-gold-500"></i>
+              </div>
+              <span class="font-serif text-sm font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">Pillar 02</span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">PERSONALIZED ASSISTANCE</h3>
+            <p class="mt-3 text-base text-charcoal-700 leading-relaxed">&ldquo;Direct contact with a Business Associate for financial service enquiries.&rdquo;</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-forest-50 flex items-center gap-2 text-xs text-forest-800 font-medium">
+            <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+            <span>Consult directly with Brijesh Gangadharan, Business Associate.</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white border border-gold-600/25 shadow-card-luxury flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-forest-800 text-gold-400 flex items-center justify-center">
+                <i data-lucide="trending-up" class="w-6 h-6 text-gold-500"></i>
+              </div>
+              <span class="font-serif text-sm font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">Pillar 03</span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">GROWTH-FOCUSED APPROACH</h3>
+            <p class="mt-3 text-base text-charcoal-700 leading-relaxed">&ldquo;A service philosophy centered around financial growth and planning.&rdquo;</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-forest-50 flex items-center gap-2 text-xs text-forest-800 font-medium">
+            <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+            <span>Structured roadmaps tailored around financial milestones.</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white border border-gold-600/25 shadow-card-luxury flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-xl bg-forest-800 text-gold-400 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-6 h-6 text-gold-500"></i>
+              </div>
+              <span class="font-serif text-sm font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">Pillar 04</span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">SECURITY-MINDED</h3>
+            <p class="mt-3 text-base text-charcoal-700 leading-relaxed">&ldquo;Insurance and financial planning solutions are part of the company's service offering.&rdquo;</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-forest-50 flex items-center gap-2 text-xs text-forest-800 font-medium">
+            <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+            <span>Integrated protection solutions designed to mitigate vulnerabilities.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       8. FEATURED BRAND STATEMENT
+       ======================================================= -->
+  <section class="relative py-24 sm:py-32 bg-forest-900 text-ivory overflow-hidden border-t border-gold-500/30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-forest-800 border border-gold-500/40 text-gold-300 text-xs font-semibold tracking-[0.25em] uppercase">
+        <span class="w-1.5 h-1.5 rotate-45 bg-gold-400"></span>
+        <span>Credtree Brand Philosophy</span>
+        <span class="w-1.5 h-1.5 rotate-45 bg-gold-400"></span>
+      </div>
+
+      <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-ivory tracking-tight leading-[1.15] max-w-4xl mx-auto">
+        &ldquo;Where Credit Meets Growth &amp; Security&rdquo;
+      </h2>
+
+      <div class="flex items-center justify-center gap-2.5 my-8 max-w-[340px] mx-auto">
+        <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-500/70 to-gold-400"></span>
+        <span class="w-1.5 h-1.5 rotate-45 bg-gold-500 shrink-0"></span>
+        <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-500/70 to-gold-400"></span>
+      </div>
+
+      <p class="font-serif text-xl sm:text-2xl md:text-3xl font-semibold">
+        <span class="text-ivory">Simplifying Loans, </span>
+        <span class="text-gold-400 italic">Insurance &amp; Investments</span>
+      </p>
+
+      <p class="mt-6 text-sm sm:text-base text-ivory/80 max-w-2xl mx-auto leading-relaxed">
+        Rooted in Kannur, we facilitate structured credit avenues, multi-class insurance distribution, and disciplined wealth planning—guided by integrity, clarity, and individual attention.
+      </p>
+
+
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       9. CONTACT & ENQUIRY SECTION
+       ======================================================= -->
+  <section id="contact" class="py-20 sm:py-24 bg-ivory-light border-t border-gold-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full text-xs font-semibold tracking-[0.2em] uppercase bg-forest-50 text-forest-800 border border-forest-100">
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+          <span>Direct Consultation</span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-600"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-forest-900">
+          Let's Talk About Your Financial Needs
+        </h2>
+        <div class="flex items-center justify-center gap-2.5 my-4 max-w-[200px] mx-auto">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"></span>
+          <span class="w-1.5 h-1.5 rotate-45 bg-gold-500"></span>
+          <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"></span>
+        </div>
+        <p class="text-base sm:text-lg text-charcoal-700">
+          Connect with Credtree Financial Services to explore loans, insurance, investments and wealth management services.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+        
+        <!-- Left: Official Contact Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-7 sm:p-8 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury">
+            <div class="flex items-center gap-4 pb-6 border-b border-gold-600/20">
+              <div class="w-14 h-14 rounded-full bg-forest-800 text-gold-400 font-serif font-bold text-xl flex items-center justify-center border-2 border-gold-500/50 shrink-0">
+                BG
+              </div>
+              <div>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-forest-900">Brijesh Gangadharan</h3>
+                <p class="text-xs font-semibold text-gold-800 uppercase tracking-widest mt-0.5">Business Associate</p>
+                <p class="text-xs text-charcoal-500 mt-0.5">Credtree Financial Services</p>
+              </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="grid grid-cols-3 gap-2 py-6 border-b border-gold-600/15">
+              <a href="tel:9778484739" class="flex flex-col items-center justify-center p-3 rounded-xl bg-forest-800 text-ivory text-center hover:bg-forest-900 border border-gold-600/30 transition-all shadow-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-gold-400 mb-1"></i>
+                <span class="text-[11px] font-bold">Call Now</span>
+              </a>
+              <a href="https://wa.me/919778484739" target="_blank" class="flex flex-col items-center justify-center p-3 rounded-xl bg-green-700 text-white text-center hover:bg-green-800 transition-all shadow-sm">
+                <i data-lucide="message-square" class="w-4 h-4 text-white mb-1"></i>
+                <span class="text-[11px] font-bold">WhatsApp</span>
+              </a>
+              <a href="mailto:info@credtree.in" class="flex flex-col items-center justify-center p-3 rounded-xl bg-white text-forest-800 border border-gold-600/40 text-center hover:bg-forest-50 transition-all shadow-sm">
+                <i data-lucide="mail" class="w-4 h-4 text-gold-700 mb-1"></i>
+                <span class="text-[11px] font-bold">Email Us</span>
+              </a>
+            </div>
+
+            <!-- List of Details -->
+            <div class="pt-6 space-y-4">
+              <div class="flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-forest-50 text-forest-800 shrink-0">
+                  <i data-lucide="phone" class="w-4 h-4 text-gold-700"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 block">Official Phone</span>
+                  <a href="tel:9778484739" class="text-sm sm:text-base font-bold text-forest-900 hover:text-gold-700">+91 97784 84739</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-forest-50 text-forest-800 shrink-0">
+                  <i data-lucide="message-square" class="w-4 h-4 text-gold-700"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 block">Official WhatsApp</span>
+                  <a href="https://wa.me/919778484739" target="_blank" class="text-sm sm:text-base font-bold text-forest-900 hover:text-gold-700">+91 97784 84739</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-forest-50 text-forest-800 shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4 text-gold-700"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 block">Official Email</span>
+                  <a href="mailto:info@credtree.in" class="text-sm sm:text-base font-bold text-forest-900 hover:text-gold-700">info@credtree.in</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-forest-50 text-forest-800 shrink-0">
+                  <i data-lucide="globe" class="w-4 h-4 text-gold-700"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 block">Official Website</span>
+                  <a href="https://www.credtree.in" target="_blank" class="text-sm sm:text-base font-bold text-forest-900 hover:text-gold-700">www.credtree.in</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3.5">
+                <div class="p-2 rounded-lg bg-forest-50 text-forest-800 shrink-0">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-gold-700"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 block">Office Address</span>
+                  <p class="text-sm font-semibold text-forest-900">Ground Floor, Kamath Building,</p>
+                  <p class="text-sm font-semibold text-forest-900">SN Park, Kannur - 1</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="lg:col-span-7">
+          <form id="contact-form" class="p-8 sm:p-10 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury space-y-5">
+            <div class="border-b border-gold-600/20 pb-4">
+              <h3 class="font-serif text-2xl font-bold text-forest-900">Send a Financial Service Enquiry</h3>
+              <p class="text-xs text-charcoal-600 mt-1">Direct consultation with Brijesh Gangadharan, Business Associate &bull; Credtree Kannur</p>
+            </div>
+
+            <div id="form-success" class="hidden p-6 rounded-xl bg-forest-50 border border-gold-500 text-center space-y-3">
+              <i data-lucide="check-circle-2" class="w-8 h-8 text-forest-800 mx-auto"></i>
+              <h4 class="font-serif font-bold text-lg text-forest-900">Enquiry Prepared Successfully</h4>
+              <p class="text-xs text-charcoal-700">Thank you. Your enquiry is ready to be reviewed by Brijesh Gangadharan.</p>
+              <div class="flex justify-center gap-3 pt-2">
+                <a id="forward-whatsapp-btn" href="#" target="_blank" class="px-4 py-2 rounded-lg bg-green-700 text-white text-xs font-bold uppercase tracking-wider">
+                  Forward on WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div id="form-fields" class="space-y-4">
+              <div>
+                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+                  Full Name <span class="text-red-600">*</span>
+                </label>
+                <input type="text" id="form-name" required placeholder="e.g. Ramesh Kumar" class="w-full px-4 py-3 rounded-lg border border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white text-sm focus:outline-none" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="phone" class="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+                    Phone Number <span class="text-red-600">*</span>
+                  </label>
+                  <input type="tel" id="form-phone" required placeholder="e.g. 9778484739" class="w-full px-4 py-3 rounded-lg border border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white text-sm focus:outline-none" />
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+                    Email Address <span class="text-red-600">*</span>
+                  </label>
+                  <input type="email" id="form-email" required placeholder="e.g. name@domain.com" class="w-full px-4 py-3 rounded-lg border border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white text-sm focus:outline-none" />
+                </div>
+              </div>
+
+              <div>
+                <label for="service" class="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+                  Service Required <span class="text-red-600">*</span>
+                </label>
+                <select id="form-service" required class="w-full px-4 py-3 rounded-lg border border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white text-sm focus:outline-none">
+                  <option value="">-- Please select a service category --</option>
+                  <option value="Home Loan">Home Loan</option>
+                  <option value="Personal Loan">Personal Loan</option>
+                  <option value="Car Loan">Car Loan</option>
+                  <option value="Loan Against Property">Loan Against Property</option>
+                  <option value="Business Loan">Business Loan</option>
+                  <option value="Credit Card">Credit Card</option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="Investment">Investment</option>
+                  <option value="Wealth Management">Wealth Management</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+                  Message / Requirement Details
+                </label>
+                <textarea id="form-message" rows="4" placeholder="Briefly describe your requirements..." class="w-full px-4 py-3 rounded-lg border border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white text-sm focus:outline-none resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 px-6 rounded-xl bg-forest-800 text-ivory text-sm font-semibold tracking-wide uppercase shadow-card-luxury hover:bg-forest-900 border border-gold-500/40 transition-all flex items-center justify-center gap-2 group">
+                <i data-lucide="send" class="w-4 h-4 text-gold-400 group-hover:translate-x-1 transition-transform"></i>
+                <span>Send Enquiry</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       10. FOOTER (Matching Reference Flyer / Card Bottom)
+       ======================================================= -->
+  <footer class="bg-forest-900 text-ivory border-t border-gold-600/30 relative overflow-hidden">
+    <!-- Gold Top Hairline with Centered Diamond -->
+    <div class="relative">
+      <div class="h-[2px] bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-gold-500 shadow-sm border border-forest-900"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+      
+      <!-- Top Tier: Clean Centered Brand & Tagline -->
+      <div class="flex flex-col items-center text-center space-y-3 pb-8 border-b border-forest-800/80">
+        <div class="flex items-center gap-3">
+          <svg viewBox="0 0 200 200" class="w-10 h-10" fill="none">
+            <path d="M 40 148 C 16 112 22 58 64 30 C 104 4 162 14 186 54 C 206 88 196 132 166 156" stroke="#C88A00" stroke-width="6" stroke-linecap="round" fill="none" />
+            <rect x="102" y="126" width="11" height="32" rx="2" fill="#075B42" />
+            <rect x="117" y="108" width="11" height="50" rx="2" fill="#075B42" />
+            <rect x="132" y="88" width="12" height="70" rx="2" fill="#075B42" />
+            <path d="M 88 160 C 104 146 126 122 152 74" stroke="#F2C14E" stroke-width="4.5" stroke-linecap="round" />
+          </svg>
+          <div>
+            <span class="font-serif tracking-[0.14em] font-bold uppercase text-ivory text-xl">
+              <span class="text-ivory">CRED</span><span class="text-gold-400">TREE</span>
+            </span>
+            <p class="font-sans tracking-[0.24em] uppercase font-semibold text-[9px] text-gold-400">FINANCIAL SERVICES</p>
+          </div>
+        </div>
+        <p class="font-serif italic text-gold-300 text-sm sm:text-base font-normal">&ldquo;Where Credit Meets Growth &amp; Security&rdquo;</p>
+      </div>
+
+      <!-- Middle Tier: 3 Official Contact Columns -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 border-b border-forest-800/80 text-xs text-ivory/85 max-w-4xl mx-auto">
+
+        <!-- 1. Office Location -->
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-forest-800 border border-gold-600/30 flex items-center justify-center shrink-0 text-gold-400">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider text-gold-400 block mb-0.5">Office Location</span>
+            <p class="leading-snug">
+              Ground Floor, Kamath Building,<br />
+              SN Park, Kannur - 1
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Official Email -->
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-forest-800 border border-gold-600/30 flex items-center justify-center shrink-0 text-gold-400">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider text-gold-400 block mb-0.5">Official Email</span>
+            <a href="mailto:info@credtree.in" class="hover:text-gold-300 font-medium block transition-colors">info@credtree.in</a>
+            <span class="text-[11px] text-ivory/60">Enquiries &amp; Consultations</span>
+          </div>
+        </div>
+
+        <!-- 3. Official Website -->
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-forest-800 border border-gold-600/30 flex items-center justify-center shrink-0 text-gold-400">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-bold tracking-wider text-gold-400 block mb-0.5">Web Presence</span>
+            <a href="https://www.credtree.in" target="_blank" class="hover:text-gold-300 font-medium block transition-colors">www.credtree.in</a>
+            <span class="text-[11px] text-ivory/60">Kannur, Kerala</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Tier: Disclaimer & Copyright -->
+      <div class="pt-6 space-y-3 text-center text-xs text-ivory/60">
+        <p class="text-[11px] text-ivory/50 leading-relaxed max-w-3xl mx-auto">
+          <strong class="text-gold-400/80">Disclaimer: </strong>
+          Financial products and services are subject to applicable terms, conditions, eligibility and provider requirements. Information on this website is for general informational purposes and does not constitute a guarantee of approval, returns or financial outcomes.
+        </p>
+
+        <p class="pt-2 text-[11px] text-ivory/50">
+          &copy; 2026 CREDTREE FINANCIAL SERVICES. All rights reserved. &bull; Kannur, Kerala
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lucide Icon Initialization & Interactive Scripts -->
+  <script>
+    lucide.createIcons();
+
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileClose = document.getElementById('mobile-close');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileToggle && mobileDrawer && mobileClose) {
+      mobileToggle.addEventListener('click', () => {
+        mobileDrawer.classList.remove('hidden');
+      });
+      mobileClose.addEventListener('click', () => {
+        mobileDrawer.classList.add('hidden');
+      });
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.add('hidden');
+        });
+      });
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    const formFields = document.getElementById('form-fields');
+    const forwardWhatsappBtn = document.getElementById('forward-whatsapp-btn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('form-name').value;
+        const phone = document.getElementById('form-phone').value;
+        const email = document.getElementById('form-email').value;
+        const service = document.getElementById('form-service').value;
+        const message = document.getElementById('form-message').value;
+
+        const whatsappText = encodeURIComponent(
+          `Hello Brijesh Gangadharan, I have submitted an enquiry on credtree.in:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service:* ${service}\n*Message:* ${message || 'Looking for financial guidance.'}`
+        );
+
+        if (forwardWhatsappBtn) {
+          forwardWhatsappBtn.href = `https://wa.me/919778484739?text=${whatsappText}`;
+        }
+
+        formFields.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
