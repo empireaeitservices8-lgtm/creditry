@@ -28,17 +28,18 @@ export const CONTACT_INFO = {
     phoneCall: "tel:9778484739",
     whatsappChat: "https://wa.me/919778484739?text=Hello%20Credtree%20Financial%20Services%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.",
     emailMailto: "mailto:info@credtree.in",
+    gmailCompose: "https://mail.google.com/mail/?view=cm&fs=1&to=info@credtree.in&su=Financial%20Service%20Enquiry%20-%20Credtree&body=Hello%20Brijesh%20Gangadharan%2C%0A%0AI%20would%20like%20to%20enquire%20about%20your%20services.%0A%0AThank%20you%2C",
     website: "https://www.credtree.in",
   }
 };
 
 export const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Why Credtree", href: "#why-credtree" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Solutions", href: "/#solutions" },
+  { label: "Why Credtree", href: "/#why-credtree" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const PRIMARY_SERVICES = [

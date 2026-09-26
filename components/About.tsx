@@ -1,209 +1,337 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import GoldDivider from "./GoldDivider";
-import Logo from "./Logo";
-import { Shield, Layers, Phone, Mail, MapPin, Building2, CheckCircle2 } from "lucide-react";
-import { CONTACT_PERSON, CONTACT_INFO } from "@/lib/constants";
+import { 
+  ShieldCheck, 
+  Layers, 
+  TrendingUp, 
+  CreditCard, 
+  CheckCircle2, 
+  Sparkles, 
+  Award, 
+  Home, 
+  Briefcase, 
+  Building2,
+  FileCheck2,
+  ArrowRight
+} from "lucide-react";
+import { COMPANY_NAME, CONTACT_PERSON } from "@/lib/constants";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-24 bg-ivory relative overflow-hidden">
+    <section id="about" className="py-24 sm:py-32 bg-gradient-to-b from-ivory via-[#F4EDE0]/50 to-ivory relative overflow-hidden">
+      {/* Background ambient lighting glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-gold-400/10 via-forest-600/5 to-transparent blur-3xl pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-gold-500/5 blur-3xl pointer-events-none rounded-full" />
+      
       {/* Decorative top gold hairline */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-600/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold-600/40 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <SectionHeading
-          eyebrow="About Our Facilitation"
+          eyebrow="Official Facilitation Mandate"
           title="Financial Solutions Built Around Your Goals"
           subtitle="Where Credit Meets Growth & Security"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        {/* ========================================================
+            SHOWCASE CENTERPIECE: OFFICIAL BUSINESS OBJECTIVE PLAQUE
+            ======================================================== */}
+        <div className="relative max-w-5xl mx-auto mb-16 sm:mb-20">
+          {/* Ambient outer halo */}
+          <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-r from-gold-600/40 via-gold-400/50 to-gold-700/40 blur-md opacity-70 group-hover:opacity-100 transition duration-500" />
+
+          {/* Master Plaque Card */}
+          <div className="relative rounded-[2.25rem] bg-gradient-to-br from-[#00382B] via-[#002D22] to-[#011F18] border-2 border-gold-500/50 shadow-[0_25px_60px_-15px_rgba(0,45,34,0.45),0_0_35px_-10px_rgba(200,138,0,0.3)] p-8 sm:p-12 md:p-14 overflow-hidden text-center text-ivory">
+            
+            {/* Ornate Gold Corner Filigree Accents */}
+            {/* Top-Left */}
+            <div className="absolute top-4 left-4 w-12 h-12 pointer-events-none opacity-80">
+              <svg viewBox="0 0 48 48" fill="none" className="w-full h-full text-gold-400">
+                <path d="M4 20 V6 C4 4.89543 4.89543 4 6 4 H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M8 14 V8 H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <circle cx="4" cy="4" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            {/* Top-Right */}
+            <div className="absolute top-4 right-4 w-12 h-12 pointer-events-none opacity-80">
+              <svg viewBox="0 0 48 48" fill="none" className="w-full h-full text-gold-400">
+                <path d="M44 20 V6 C44 4.89543 43.1046 4 42 4 H28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M40 14 V8 H34" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <circle cx="44" cy="4" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            {/* Bottom-Left */}
+            <div className="absolute bottom-4 left-4 w-12 h-12 pointer-events-none opacity-80">
+              <svg viewBox="0 0 48 48" fill="none" className="w-full h-full text-gold-400">
+                <path d="M4 28 V42 C4 43.1046 4.89543 44 6 44 H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M8 34 V40 H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <circle cx="4" cy="4" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            {/* Bottom-Right */}
+            <div className="absolute bottom-4 right-4 w-12 h-12 pointer-events-none opacity-80">
+              <svg viewBox="0 0 48 48" fill="none" className="w-full h-full text-gold-400">
+                <path d="M44 28 V42 C44 43.1046 43.1046 44 42 44 H28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M40 34 V40 H34" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <circle cx="44" cy="4" r="2" fill="currentColor" />
+              </svg>
+            </div>
+
+            {/* Giant Background Watermark Quotation Mark */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-gold-400/[0.04] font-serif text-[180px] sm:text-[240px] select-none pointer-events-none leading-none">
+              &ldquo;
+            </div>
+
+            {/* Top Emblem & Header */}
+            <div className="relative z-10 flex flex-col items-center justify-center space-y-3 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-gold-600/30 via-gold-500/20 to-gold-600/30 border border-gold-400/50 shadow-inner">
+                <Sparkles className="w-4 h-4 text-gold-300" />
+                <span className="text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-gold-300">
+                  Official Business Objective
+                </span>
+                <Sparkles className="w-4 h-4 text-gold-300" />
+              </div>
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-gold-200/80">
+                Credtree Financial Services &bull; Operating Mandate
+              </p>
+            </div>
+
+            {/* Verbatim Business Objective Quote */}
+            <div className="relative z-10 my-6 sm:my-8 px-2 sm:px-8">
+              <blockquote className="font-serif italic text-lg sm:text-2xl md:text-[27px] text-[#FFFDF9] font-normal leading-relaxed sm:leading-[1.6] tracking-wide text-center drop-shadow-sm">
+                &ldquo;To facilitate secured and unsecured loans including home loans, personal loans,
+                car loans, loans against property and business loans, and to distribute financial
+                products such as credit cards, all class of insurance products, investment and
+                wealth management services.&rdquo;
+              </blockquote>
+            </div>
+
+            {/* Delicate Golden Divider with Central Diamond */}
+            <div className="relative z-10 my-6 sm:my-8">
+              <GoldDivider theme="dark" width="md" />
+            </div>
+
+            {/* 6 Interactive Golden Mandate Scope Pills */}
+            <div className="relative z-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 max-w-4xl mx-auto pt-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.07] hover:bg-white/[0.14] border border-gold-400/30 text-gold-200 text-xs sm:text-[13px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 shadow-xs">
+                <Home className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <span>Home Loans</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.07] hover:bg-white/[0.14] border border-gold-400/30 text-gold-200 text-xs sm:text-[13px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 shadow-xs">
+                <Briefcase className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <span>Business Loans</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.07] hover:bg-white/[0.14] border border-gold-400/30 text-gold-200 text-xs sm:text-[13px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 shadow-xs">
+                <Building2 className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <span>Loans Against Property</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.07] hover:bg-white/[0.14] border border-gold-400/30 text-gold-200 text-xs sm:text-[13px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 shadow-xs">
+                <ShieldCheck className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <span>All Classes of Insurance</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.07] hover:bg-white/[0.14] border border-gold-400/30 text-gold-200 text-xs sm:text-[13px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 shadow-xs">
+                <CreditCard className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <span>Credit Cards Distribution</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/[0.07] hover:bg-white/[0.14] border border-gold-400/30 text-gold-200 text-xs sm:text-[13px] font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 shadow-xs">
+                <TrendingUp className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                <span>Wealth Management</span>
+              </div>
+            </div>
+
+            {/* Bottom Official Endorsement Footnote */}
+            <div className="relative z-10 mt-8 sm:mt-10 pt-5 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gold-200/70">
+              <span className="font-semibold text-gold-300">
+                Official Business Associate: {CONTACT_PERSON.name}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <FileCheck2 className="w-4 h-4 text-gold-400" />
+                <span>Ground Floor, Kamath Building, SN Park, Kannur - 1</span>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ========================================================
+            3 STRATEGIC PILLARS: HOW WE DELIVER ON OUR OBJECTIVE
+            ======================================================== */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-14">
           
-          {/* Left Column: Visual Reproduction of the Official Business Card */}
-          <div className="lg:col-span-6">
-            <div className="space-y-4">
-              <span className="text-[11px] font-bold uppercase tracking-widest text-gold-700 block">
-                Official Business Associate Card
+          {/* Pillar 1: Lending Facilitation */}
+          <div className="group relative p-8 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-forest-800 via-gold-500 to-forest-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-forest-50 border border-gold-500/30 flex items-center justify-center text-forest-800 mb-6 group-hover:bg-forest-800 group-hover:text-gold-400 transition-colors shadow-xs">
+                <Layers className="w-7 h-7" />
+              </div>
+
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-800 bg-gold-50 px-3 py-1 rounded-md border border-gold-200">
+                Secured &amp; Unsecured Credit
               </span>
 
-              {/* Physical Business Card Mockup */}
-              <div className="relative rounded-2xl bg-[#FFFDF9] border border-gold-600/40 shadow-card-luxury p-6 sm:p-8 overflow-hidden transition-all duration-300 hover:shadow-card-hover group">
-                
-                {/* Signature Bottom-Right Dark Green Swoosh Wave with Double Gold Trim (as seen on the business card) */}
-                <div className="absolute -bottom-8 -right-8 w-48 sm:w-56 h-48 sm:h-56 pointer-events-none overflow-hidden">
-                  <svg viewBox="0 0 200 200" className="w-full h-full" fill="none">
-                    {/* Dark Green Curved Wave */}
-                    <path
-                      d="M 50 200 C 60 140 120 100 200 80 L 200 200 Z"
-                      fill="#002D22"
-                    />
-                    {/* Metallic Gold Border Curve */}
-                    <path
-                      d="M 48 200 C 58 138 118 98 200 78"
-                      stroke="#C88A00"
-                      strokeWidth="5"
-                    />
-                    <path
-                      d="M 52 200 C 62 144 122 104 200 84"
-                      stroke="#F2C14E"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
-                </div>
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mt-4 mb-2.5">
+                Credit &amp; Loan Facilitation
+              </h4>
 
-                <div className="relative z-10 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
-                  
-                  {/* Left Half: Logo & Tagline */}
-                  <div className="sm:col-span-5 flex flex-col items-start justify-center">
-                    <Logo variant="compact" size="md" />
-                    <p className="font-serif italic text-[11px] text-forest-800 font-semibold mt-3 leading-snug">
-                      Where Credit Meets Growth &amp; Security
-                    </p>
-                  </div>
+              <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed mb-6 font-normal">
+                Structured loan options tailored to your eligibility. We connect you with top banking institutions with transparent comparisons and dedicated sanction support.
+              </p>
 
-                  {/* Vertical Gold Divider with Diamond (as on reference card) */}
-                  <div className="hidden sm:flex sm:col-span-1 justify-center items-center h-full min-h-[140px]">
-                    <div className="relative flex flex-col items-center justify-center h-full">
-                      <span className="w-[1px] h-14 bg-gradient-to-b from-transparent to-gold-600" />
-                      <span className="w-2 h-2 rotate-45 bg-gold-600 my-1 shadow-sm shrink-0" />
-                      <span className="w-[1px] h-14 bg-gradient-to-t from-transparent to-gold-600" />
-                    </div>
-                  </div>
+              <ul className="space-y-2.5 border-t border-forest-50 pt-5 text-xs text-charcoal-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Home Loans for Purchase &amp; Construction</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Business Loans &amp; Expansion Capital</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Loans Against Property (LAP) &amp; Personal Loans</span>
+                </li>
+              </ul>
+            </div>
 
-                  {/* Right Half: Associate Details */}
-                  <div className="sm:col-span-6 space-y-2.5">
-                    <div>
-                      <h4 className="font-serif text-lg sm:text-xl font-bold text-forest-900 leading-tight">
-                        {CONTACT_PERSON.name}
-                      </h4>
-                      <p className="text-xs font-semibold text-gold-800 uppercase tracking-wider mt-0.5">
-                        {CONTACT_PERSON.designation}
-                      </p>
-                    </div>
-
-                    <div className="space-y-1.5 pt-2 text-xs">
-                      {/* Phone */}
-                      <a
-                        href={CONTACT_INFO.links.phoneCall}
-                        className="flex items-center gap-2 text-charcoal-700 hover:text-forest-800 font-medium transition-colors"
-                      >
-                        <div className="w-6 h-6 rounded-full bg-forest-800 text-gold-400 flex items-center justify-center shrink-0">
-                          <Phone className="w-3 h-3" />
-                        </div>
-                        <span>{CONTACT_INFO.phoneFormatted}</span>
-                      </a>
-
-                      {/* Email */}
-                      <a
-                        href={CONTACT_INFO.links.emailMailto}
-                        className="flex items-center gap-2 text-charcoal-700 hover:text-forest-800 font-medium transition-colors"
-                      >
-                        <div className="w-6 h-6 rounded-full bg-forest-800 text-gold-400 flex items-center justify-center shrink-0">
-                          <Mail className="w-3 h-3" />
-                        </div>
-                        <span>{CONTACT_INFO.email}</span>
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Office Location Strip */}
-                <div className="relative z-10 mt-5 pt-3 border-t border-gold-600/15 flex items-center justify-between text-[11px] text-charcoal-600">
-                  <div className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-gold-700 shrink-0" />
-                    <span>Ground Floor, Kamath Building, SN Park, Kannur - 1</span>
-                  </div>
-                  <span className="font-semibold text-forest-800 hidden sm:inline">www.credtree.in</span>
-                </div>
-
-              </div>
-
-              {/* Factual Pillars */}
-              <div className="grid grid-cols-2 gap-3 pt-2">
-                <div className="p-3.5 rounded-xl bg-white border border-gold-600/20 shadow-sm flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                  <span className="text-xs font-semibold text-forest-900">Direct Associate Contact</span>
-                </div>
-                <div className="p-3.5 rounded-xl bg-white border border-gold-600/20 shadow-sm flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                  <span className="text-xs font-semibold text-forest-900">Official Kannur Presence</span>
-                </div>
-              </div>
+            <div className="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between">
+              <a
+                href="#contact"
+                className="text-xs font-bold uppercase tracking-wider text-forest-900 group-hover:text-gold-700 inline-flex items-center gap-1.5 transition-colors"
+              >
+                <span>Request Loan Consultation</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
 
-          {/* Right Column: Narrative Website Copy Founded on Business Objective */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="space-y-4">
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-forest-900 leading-tight">
-                Dedicated Financial Facilitation with Integrity and Precision
-              </h3>
-              <p className="text-base text-charcoal-700 leading-relaxed">
-                At <strong>Credtree Financial Services</strong>, we act as a trusted bridge
-                between your financial goals and the broader ecosystem of financial institutions.
-                Our operational mandate is built directly on the official business objective:
+          {/* Pillar 2: Insurance & Cards */}
+          <div className="group relative p-8 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-forest-800 via-gold-500 to-forest-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-forest-50 border border-gold-500/30 flex items-center justify-center text-forest-800 mb-6 group-hover:bg-forest-800 group-hover:text-gold-400 transition-colors shadow-xs">
+                <ShieldCheck className="w-7 h-7" />
+              </div>
+
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-800 bg-gold-50 px-3 py-1 rounded-md border border-gold-200">
+                Risk &amp; Liquidity Solutions
+              </span>
+
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mt-4 mb-2.5">
+                Insurance &amp; Financial Products
+              </h4>
+
+              <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed mb-6 font-normal">
+                Multi-class risk protection and liquidity tools ensuring complete financial security for your family, healthcare, and enterprise assets.
               </p>
 
-              {/* Exact Business Objective Quote Card */}
-              <div className="p-5 rounded-xl bg-white border-l-4 border-gold-600 shadow-sm space-y-2">
-                <p className="text-xs font-bold uppercase tracking-wider text-gold-800">
-                  Business Objective
-                </p>
-                <p className="text-sm text-forest-900 italic font-medium leading-relaxed">
-                  &ldquo;To facilitate secured and unsecured loans including home loans, personal loans,
-                  car loans, loans against property and business loans, and to distribute financial
-                  products such as credit cards, all class of insurance products, investment and
-                  wealth management services.&rdquo;
-                </p>
+              <ul className="space-y-2.5 border-t border-forest-50 pt-5 text-xs text-charcoal-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>All Classes of Health, Life &amp; Asset Insurance</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Premium Credit Card Distribution</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Tailored Coverage Built Around Your Needs</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between">
+              <a
+                href="#contact"
+                className="text-xs font-bold uppercase tracking-wider text-forest-900 group-hover:text-gold-700 inline-flex items-center gap-1.5 transition-colors"
+              >
+                <span>Explore Protection</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+
+          {/* Pillar 3: Wealth Management */}
+          <div className="group relative p-8 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-forest-800 via-gold-500 to-forest-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-forest-50 border border-gold-500/30 flex items-center justify-center text-forest-800 mb-6 group-hover:bg-forest-800 group-hover:text-gold-400 transition-colors shadow-xs">
+                <TrendingUp className="w-7 h-7" />
               </div>
 
-              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed">
-                Whether you are seeking secured borrowing for home ownership, commercial lines to
-                support enterprise scaling, multi-class risk protection, or long-term wealth
-                planning, Credtree provides disciplined personal attention at every stage.
+              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-800 bg-gold-50 px-3 py-1 rounded-md border border-gold-200">
+                Sustainable Growth
+              </span>
+
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mt-4 mb-2.5">
+                Wealth &amp; Investments
+              </h4>
+
+              <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed mb-6 font-normal">
+                Disciplined wealth advisory services focused on structured portfolio planning and long-term financial milestones with disciplined risk management.
               </p>
+
+              <ul className="space-y-2.5 border-t border-forest-50 pt-5 text-xs text-charcoal-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Strategic Investment &amp; Wealth Advisory</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Long-Term Capital Preservation &amp; Growth</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-gold-700 shrink-0" />
+                  <span>Transparent, Objective-Driven Planning</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Scope Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-              <div className="p-4 rounded-xl bg-white border border-gold-600/20 shadow-sm">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <Layers className="w-4 h-4 text-forest-800" />
-                  <h4 className="font-serif font-bold text-sm text-forest-900">
-                    Credit Facilitation
-                  </h4>
-                </div>
-                <p className="text-xs text-charcoal-600 leading-relaxed">
-                  Home Loans, Personal Loans, Car Loans, Business Loans, and Loans Against Property.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-white border border-gold-600/20 shadow-sm">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <Shield className="w-4 h-4 text-forest-800" />
-                  <h4 className="font-serif font-bold text-sm text-forest-900">
-                    Protection &amp; Wealth
-                  </h4>
-                </div>
-                <p className="text-xs text-charcoal-600 leading-relaxed">
-                  Multi-class insurance distribution, credit cards, and wealth management services.
-                </p>
-              </div>
-            </div>
-
-            {/* Transparent Note */}
-            <div className="p-4 rounded-xl bg-forest-50 border border-forest-100 text-xs text-charcoal-700 leading-relaxed">
-              <span className="font-semibold text-forest-900">Transparent Facilitation: </span>
-              Credtree Financial Services functions as an authorized associate and distributor, ensuring
-              client options are evaluated with balanced clarity, documentation diligence, and respect
-              for institutional criteria.
+            <div className="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between">
+              <a
+                href="#contact"
+                className="text-xs font-bold uppercase tracking-wider text-forest-900 group-hover:text-gold-700 inline-flex items-center gap-1.5 transition-colors"
+              >
+                <span>Plan Your Wealth</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
 
         </div>
+
+        {/* ========================================================
+            AUTHORITATIVE REASSURANCE BANNER
+            ======================================================== */}
+        <div className="p-6 sm:p-7 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury flex flex-col md:flex-row items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-xl bg-forest-800 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/40 shadow-sm">
+              <Award className="w-6 h-6" />
+            </div>
+            <div>
+              <h5 className="font-serif text-base sm:text-lg font-bold text-forest-900">
+                Transparent Facilitation with Authorized Excellence
+              </h5>
+              <p className="text-xs text-charcoal-600 leading-relaxed mt-0.5 max-w-3xl">
+                Credtree Financial Services functions strictly as an authorized associate, ensuring every loan, insurance distribution, and investment request is managed with total clarity, documentation diligence, and institutional compliance.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="#contact"
+            className="shrink-0 px-6 py-3 rounded-xl bg-forest-800 text-ivory text-xs font-bold uppercase tracking-wider hover:bg-forest-900 transition-colors shadow-sm"
+          >
+            Direct Associate Contact
+          </a>
+        </div>
+
       </div>
     </section>
   );

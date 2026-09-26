@@ -65,14 +65,14 @@ export default function ContactForm() {
       newErrors.phone = "Phone number must start with 6, 7, 8, or 9 and be 10 digits.";
     }
 
-    // 3. Email Validation (Strictly lowercase letters only)
+    // 3. Email Validation (Strictly requires @gmail.com)
     const cleanEmail = formData.email.trim();
     if (!cleanEmail) {
-      newErrors.email = "Please enter your email address.";
+      newErrors.email = "Please enter your Gmail address.";
     } else if (/[A-Z]/.test(cleanEmail)) {
       newErrors.email = "Email must contain lowercase letters only.";
-    } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(cleanEmail)) {
-      newErrors.email = "Please enter a valid lowercase email address.";
+    } else if (!/^[a-z0-9._%+-]+@gmail\.com$/.test(cleanEmail)) {
+      newErrors.email = "Only Gmail addresses are allowed (must end with @gmail.com).";
     }
 
     // 4. Service Category Validation
@@ -165,52 +165,19 @@ export default function ContactForm() {
           </p>
         </div>
 
-        {/* Instant Fast-Track Actions */}
-        <div className="p-4 sm:p-5 rounded-xl bg-forest-50/70 border border-forest-100 text-left space-y-3">
-          <p className="text-xs font-semibold text-forest-900 uppercase tracking-wider">
-            Choose How to Send Your Enquiry
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            {/* 1. WhatsApp */}
-            <a
-              href={whatsappEnquiryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-green-700 text-white text-xs font-bold uppercase tracking-wider hover:bg-green-800 transition-colors shadow-xs"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>Send via WhatsApp</span>
-            </a>
-
-            {/* 2. Web Gmail */}
-            <a
-              href={gmailEnquiryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider hover:bg-red-50 transition-colors shadow-xs"
-            >
-              <span className="w-4 h-4 rounded-full bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">G</span>
-              <span>Send via Gmail</span>
-            </a>
-
-            {/* 3. Default Mail */}
-            <a
-              href={mailtoEnquiryUrl}
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-forest-800 text-ivory text-xs font-bold uppercase tracking-wider hover:bg-forest-900 transition-colors shadow-xs"
-            >
-              <Mail className="w-4 h-4 text-gold-400" />
-              <span>Send via Mail App</span>
-            </a>
-
-            {/* 4. Phone */}
-            <a
-              href={CONTACT_INFO.links.phoneCall}
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gold-600/40 text-forest-900 text-xs font-bold uppercase tracking-wider hover:bg-forest-50 transition-colors shadow-xs"
-            >
-              <Phone className="w-4 h-4 text-gold-700" />
-              <span>Call Direct</span>
-            </a>
-          </div>
+        {/* Dedicated Send via Gmail Action */}
+        <div className="pt-2 max-w-sm mx-auto">
+          <a
+            href={gmailEnquiryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white font-bold text-sm uppercase tracking-wider shadow-md hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 group"
+          >
+            <svg className="w-5 h-5 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+            <span>Send via Gmail</span>
+          </a>
         </div>
 
         <button
@@ -288,7 +255,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
-            Email Address <span className="text-red-600">*</span>
+            Gmail Address (@gmail.com) <span className="text-red-600">*</span>
           </label>
           <input
             type="email"
@@ -296,7 +263,7 @@ export default function ContactForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="e.g. name@domain.com"
+            placeholder="e.g. name@gmail.com"
             className={`w-full px-4 py-3 rounded-lg border text-sm lowercase transition-colors focus:outline-none ${
               errors.email
                 ? "border-red-400 bg-red-50/30 focus:border-red-500"

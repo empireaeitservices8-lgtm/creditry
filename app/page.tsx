@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -12,10 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-ivory text-charcoal-900 overflow-x-hidden">
-      {/* 1. Header / Navigation */}
-      <Navbar />
-
+    <div className="relative min-h-screen flex flex-col bg-ivory text-charcoal-900">
       {/* Main Content Area */}
       <main className="flex-1">
         {/* 2. Hero Section */}

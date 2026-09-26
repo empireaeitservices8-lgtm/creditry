@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 import { COMPANY_NAME, TAGLINE, CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
 
 const playfair = Playfair_Display({
@@ -98,7 +99,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased selection:bg-gold-500 selection:text-white">
-        {children}
+        {/* Fixed Header on all pages */}
+        <Navbar />
+        <div className="pt-[72px] sm:pt-[80px]">
+          {children}
+        </div>
       </body>
     </html>
   );
