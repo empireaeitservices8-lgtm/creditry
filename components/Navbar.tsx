@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, Menu, X, MessageSquare } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
-import { NAV_LINKS, CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
+import { NAV_LINKS, CONTACT_INFO } from "@/lib/constants";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,14 +52,7 @@ export default function Navbar() {
             </nav>
 
             {/* Mobile Hamburger Button */}
-            <div className="flex lg:hidden items-center gap-2">
-              <a
-                href={CONTACT_INFO.links.phoneCall}
-                aria-label="Call Credtree"
-                className="p-2 rounded-full bg-forest-800/10 text-forest-800 hover:bg-forest-800/20 transition-colors"
-              >
-                <Phone className="w-4 h-4 text-forest-800" />
-              </a>
+            <div className="flex lg:hidden items-center">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -97,11 +90,6 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <div className="mt-4 py-2 border-b border-gold-600/10 text-xs text-charcoal-600">
-                <p className="font-semibold text-forest-800">{CONTACT_PERSON.name}</p>
-                <p className="text-[11px] text-gold-800 uppercase tracking-wider">{CONTACT_PERSON.designation}</p>
-              </div>
-
               {/* Mobile Nav Links */}
               <nav className="mt-6 flex flex-col space-y-1">
                 {NAV_LINKS.map((link) => (
@@ -118,29 +106,9 @@ export default function Navbar() {
               </nav>
             </div>
 
-            {/* Mobile Contact CTAs */}
-            <div className="pt-6 border-t border-gold-600/20 space-y-3">
-              <a
-                href={CONTACT_INFO.links.phoneCall}
-                onClick={closeMobileMenu}
-                className="flex items-center justify-center gap-2.5 w-full py-3 px-4 rounded-lg bg-forest-800 text-ivory font-semibold text-sm shadow-sm hover:bg-forest-900 border border-gold-600/30"
-              >
-                <Phone className="w-4 h-4 text-gold-400" />
-                <span>Talk to Us: {CONTACT_INFO.phone}</span>
-              </a>
-
-              <a
-                href={CONTACT_INFO.links.whatsappChat}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeMobileMenu}
-                className="flex items-center justify-center gap-2.5 w-full py-2.5 px-4 rounded-lg bg-white text-forest-800 font-semibold text-sm border border-gold-500/40 hover:bg-forest-50"
-              >
-                <MessageSquare className="w-4 h-4 text-green-700" />
-                <span>Chat on WhatsApp</span>
-              </a>
-
-              <p className="text-[11px] text-center text-charcoal-500 pt-1">
+            {/* Mobile Footer Note */}
+            <div className="pt-6 border-t border-gold-600/20 text-center">
+              <p className="text-[11px] text-charcoal-500">
                 {CONTACT_INFO.address.line1}, {CONTACT_INFO.address.line2}
               </p>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, MessageSquare, Phone, RefreshCw } from "lucide-react";
+import { Send, CheckCircle2, MessageSquare, Phone, Mail, RefreshCw } from "lucide-react";
 import { CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
 
 const SERVICE_OPTIONS = [
@@ -48,26 +48,36 @@ export default function ContactForm() {
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
 
+    // 1. Full Name Validation
     if (!formData.name.trim()) {
       newErrors.name = "Please enter your full name.";
     } else if (formData.name.trim().length < 3) {
       newErrors.name = "Name must be at least 3 characters.";
     }
 
-    if (!formData.phone.trim()) {
+    // 2. Phone Number Validation (Strictly 10 digits only)
+    const cleanPhone = formData.phone.trim();
+    if (!cleanPhone) {
       newErrors.phone = "Please enter your mobile phone number.";
-    } else if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/[\s-]/g, ""))) {
-      newErrors.phone = "Please enter a valid 10-digit Indian phone number.";
+    } else if (cleanPhone.length !== 10) {
+      newErrors.phone = "Phone number must be exactly 10 digits.";
+    } else if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+      newErrors.phone = "Phone number must start with 6, 7, 8, or 9 and be 10 digits.";
     }
 
-    if (!formData.email.trim()) {
+    // 3. Email Validation (Strictly lowercase letters only)
+    const cleanEmail = formData.email.trim();
+    if (!cleanEmail) {
       newErrors.email = "Please enter your email address.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
-      newErrors.email = "Please enter a valid email address.";
+    } else if (/[A-Z]/.test(cleanEmail)) {
+      newErrors.email = "Email must contain lowercase letters only.";
+    } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(cleanEmail)) {
+      newErrors.email = "Please enter a valid lowercase email address.";
     }
 
+    // 4. Service Category Validation
     if (!formData.service) {
-      newErrors.service = "Please select a service required.";
+      newErrors.service = "Please select a service category.";
     }
 
     setErrors(newErrors);
@@ -78,7 +88,17 @@ export default function ContactForm() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    let sanitizedValue = value;
+
+    if (name === "phone") {
+      // Allow only numbers and cap at exactly 10 digits (cannot type more than 10)
+      sanitizedValue = value.replace(/\D/g, "").slice(0, 10);
+    } else if (name === "email") {
+      // Automatically force all letters to lowercase
+      sanitizedValue = value.toLowerCase();
+    }
+
+    setFormData((prev) => ({ ...prev, [name]: sanitizedValue }));
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -113,6 +133,20 @@ export default function ContactForm() {
     `Hello ${CONTACT_PERSON.name}, I have submitted a financial service enquiry:\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Service:* ${formData.service}\n*Message:* ${formData.message || "Looking for detailed guidance."}`
   )}`;
 
+  // Email pre-filled subject and body
+  const emailSubject = encodeURIComponent(`Financial Service Enquiry: ${formData.service} - ${formData.name}`);
+  const emailBody = encodeURIComponent(
+    `Hello ${CONTACT_PERSON.name} & Credtree Team,\n\nI have submitted an enquiry on credtree.in:\n\n` +
+    `• Name: ${formData.name}\n` +
+    `• Phone: ${formData.phone}\n` +
+    `• Email: ${formData.email}\n` +
+    `• Service: ${formData.service}\n` +
+    `• Details: ${formData.message || "Looking for consultation and options."}\n\n` +
+    `Please reach back to me at your earliest convenience.\n\nThank you,\n${formData.name}`
+  );
+  const gmailEnquiryUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_INFO.email}&su=${emailSubject}&body=${emailBody}`;
+  const mailtoEnquiryUrl = `mailto:${CONTACT_INFO.email}?subject=${emailSubject}&body=${emailBody}`;
+
   if (isSubmitted) {
     return (
       <div className="p-8 sm:p-10 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury text-center space-y-6">
@@ -126,31 +160,54 @@ export default function ContactForm() {
           </h3>
           <p className="text-sm text-charcoal-700 leading-relaxed max-w-md mx-auto">
             Thank you, <strong className="text-forest-900">{formData.name}</strong>. Your enquiry regarding{" "}
-            <strong className="text-forest-900">{formData.service}</strong> is recorded for review by{" "}
-            <strong>{CONTACT_PERSON.name}</strong>, Business Associate.
+            <strong className="text-forest-900">{formData.service}</strong> is ready to send to{" "}
+            <strong>{CONTACT_PERSON.name}</strong> at Credtree.
           </p>
         </div>
 
         {/* Instant Fast-Track Actions */}
-        <div className="p-4 rounded-xl bg-forest-50/70 border border-forest-100 text-left space-y-3">
+        <div className="p-4 sm:p-5 rounded-xl bg-forest-50/70 border border-forest-100 text-left space-y-3">
           <p className="text-xs font-semibold text-forest-900 uppercase tracking-wider">
-            Fast-Track Your Consultation
+            Choose How to Send Your Enquiry
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            {/* 1. WhatsApp */}
             <a
               href={whatsappEnquiryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-green-700 text-white text-xs font-bold uppercase tracking-wider hover:bg-green-800 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-green-700 text-white text-xs font-bold uppercase tracking-wider hover:bg-green-800 transition-colors shadow-xs"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>Forward via WhatsApp</span>
+              <span>Send via WhatsApp</span>
             </a>
+
+            {/* 2. Web Gmail */}
+            <a
+              href={gmailEnquiryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider hover:bg-red-50 transition-colors shadow-xs"
+            >
+              <span className="w-4 h-4 rounded-full bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">G</span>
+              <span>Send via Gmail</span>
+            </a>
+
+            {/* 3. Default Mail */}
+            <a
+              href={mailtoEnquiryUrl}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-forest-800 text-ivory text-xs font-bold uppercase tracking-wider hover:bg-forest-900 transition-colors shadow-xs"
+            >
+              <Mail className="w-4 h-4 text-gold-400" />
+              <span>Send via Mail App</span>
+            </a>
+
+            {/* 4. Phone */}
             <a
               href={CONTACT_INFO.links.phoneCall}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-forest-800 text-ivory text-xs font-bold uppercase tracking-wider hover:bg-forest-900 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gold-600/40 text-forest-900 text-xs font-bold uppercase tracking-wider hover:bg-forest-50 transition-colors shadow-xs"
             >
-              <Phone className="w-4 h-4 text-gold-400" />
+              <Phone className="w-4 h-4 text-gold-700" />
               <span>Call Direct</span>
             </a>
           </div>
@@ -214,6 +271,9 @@ export default function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
+            maxLength={10}
+            inputMode="numeric"
+            pattern="[0-9]{10}"
             value={formData.phone}
             onChange={handleChange}
             placeholder="e.g. 9778484739"
@@ -237,7 +297,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="e.g. name@domain.com"
-            className={`w-full px-4 py-3 rounded-lg border text-sm transition-colors focus:outline-none ${
+            className={`w-full px-4 py-3 rounded-lg border text-sm lowercase transition-colors focus:outline-none ${
               errors.email
                 ? "border-red-400 bg-red-50/30 focus:border-red-500"
                 : "border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white"

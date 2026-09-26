@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import HeroVisual from "./HeroVisual";
-import GoldDivider from "./GoldDivider";
-import { CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -89,37 +87,6 @@ export default function Hero() {
                 <span>Explore Our Services</span>
                 <ArrowRight className="w-4 h-4 text-gold-400 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
-            </div>
-
-            {/* Direct Associate Credential Card */}
-            <div className="pt-4 border-t border-gold-600/20 max-w-md">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-forest-800 text-gold-400 font-serif font-bold flex items-center justify-center border border-gold-500/50 shadow-sm">
-                    BG
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-forest-900">
-                      {CONTACT_PERSON.name}
-                    </h3>
-                    <p className="text-xs text-gold-800 font-medium">
-                      {CONTACT_PERSON.designation} &bull; Credtree Kannur
-                    </p>
-                  </div>
-                </div>
-
-                <div className="text-right">
-                  <span className="text-[10px] uppercase tracking-wider text-charcoal-500 block">
-                    Direct Enquiries
-                  </span>
-                  <a
-                    href={CONTACT_INFO.links.phoneCall}
-                    className="text-xs font-semibold text-forest-800 hover:text-gold-700"
-                  >
-                    {CONTACT_INFO.phone}
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 

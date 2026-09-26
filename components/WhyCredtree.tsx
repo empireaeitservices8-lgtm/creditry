@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import { WHY_CREDTREE_POINTS, CONTACT_PERSON, CONTACT_INFO } from "@/lib/constants";
-import { Layers, UserCheck, TrendingUp, ShieldCheck, PhoneCall, Check } from "lucide-react";
+import { WHY_CREDTREE_POINTS, CONTACT_PERSON } from "@/lib/constants";
+import { Layers, UserCheck, TrendingUp, ShieldCheck, Check } from "lucide-react";
 
 export default function WhyCredtree() {
   const getPointIcon = (iconName: string) => {
@@ -49,14 +49,13 @@ export default function WhyCredtree() {
                   {point.title}
                 </h3>
 
-                <p className="mt-3 text-base text-charcoal-700 leading-relaxed font-normal">
-                  {point.description}
+                <p className="mt-3 text-base text-charcoal-700 leading-relaxed">
+                  &ldquo;{point.description}&rdquo;
                 </p>
               </div>
 
-              {/* Factual assurance footer */}
               <div className="mt-6 pt-4 border-t border-forest-50 flex items-center gap-2 text-xs text-forest-800 font-medium">
-                <Check className="w-4 h-4 text-gold-600" />
+                <Check className="w-4 h-4 text-gold-600 shrink-0" />
                 <span>
                   {index === 0 && "Facilitation across credit, risk coverage, and capital planning."}
                   {index === 1 && `Consult directly with ${CONTACT_PERSON.name}, Business Associate.`}
@@ -68,24 +67,14 @@ export default function WhyCredtree() {
           ))}
         </div>
 
-        {/* Contact Strip Bar */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-forest-800 text-ivory border border-gold-500/40 shadow-card-luxury flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center md:text-left">
-            <h4 className="font-serif text-xl sm:text-2xl font-bold text-ivory">
-              Need Direct Guidance for Your Financial Application?
-            </h4>
-            <p className="text-xs sm:text-sm text-gold-300">
-              Speak directly with Business Associate {CONTACT_PERSON.name} at Kamath Building, SN Park, Kannur.
-            </p>
-          </div>
-
-          <a
-            href={CONTACT_INFO.links.phoneCall}
-            className="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gold-gradient text-forest-950 font-bold text-sm tracking-wide shadow-gold-subtle hover:brightness-105 active:scale-95 transition-all"
-          >
-            <PhoneCall className="w-4 h-4" />
-            <span>Call {CONTACT_INFO.phoneFormatted}</span>
-          </a>
+        {/* Centered Guidance Notice Strip */}
+        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-forest-800 text-ivory border border-gold-500/40 shadow-card-luxury text-center">
+          <h4 className="font-serif text-xl sm:text-2xl font-bold text-ivory">
+            Need Direct Guidance for Your Financial Application?
+          </h4>
+          <p className="mt-2 text-xs sm:text-sm text-gold-300 max-w-2xl mx-auto">
+            Speak directly with Business Associate {CONTACT_PERSON.name} at Kamath Building, SN Park, Kannur.
+          </p>
         </div>
       </div>
     </section>
