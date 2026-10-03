@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Send, CheckCircle2, MessageSquare, Phone, Mail, RefreshCw } from "lucide-react";
-import { CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
+import { CONTACT_INFO } from "@/lib/constants";
 
 const SERVICE_OPTIONS = [
   "Home Loan",
@@ -130,13 +130,13 @@ export default function ContactForm() {
 
   // WhatsApp pre-filled text with submitted enquiry details
   const whatsappEnquiryUrl = `https://wa.me/91${CONTACT_INFO.phone}?text=${encodeURIComponent(
-    `Hello ${CONTACT_PERSON.name}, I have submitted a financial service enquiry:\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Service:* ${formData.service}\n*Message:* ${formData.message || "Looking for detailed guidance."}`
+    `Hello Credtree Financial Services, I have submitted a financial service enquiry:\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Service:* ${formData.service}\n*Message:* ${formData.message || "Looking for detailed guidance."}`
   )}`;
 
   // Email pre-filled subject and body
   const emailSubject = encodeURIComponent(`Financial Service Enquiry: ${formData.service} - ${formData.name}`);
   const emailBody = encodeURIComponent(
-    `Hello ${CONTACT_PERSON.name} & Credtree Team,\n\nI have submitted an enquiry on credtree.in:\n\n` +
+    `Hello Credtree Financial Services Team,\n\nI have submitted an enquiry on credtree.in:\n\n` +
     `• Name: ${formData.name}\n` +
     `• Phone: ${formData.phone}\n` +
     `• Email: ${formData.email}\n` +
@@ -161,7 +161,7 @@ export default function ContactForm() {
           <p className="text-sm text-charcoal-700 leading-relaxed max-w-md mx-auto">
             Thank you, <strong className="text-forest-900">{formData.name}</strong>. Your enquiry regarding{" "}
             <strong className="text-forest-900">{formData.service}</strong> is ready to send to{" "}
-            <strong>{CONTACT_PERSON.name}</strong> at Credtree.
+            the <strong>Credtree Financial Services</strong> team.
           </p>
         </div>
 
