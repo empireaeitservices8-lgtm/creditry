@@ -1,12 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
+export type LogoSize = "sm" | "md" | "lg" | "xl" | "2xl" | "header";
+
 interface LogoProps {
   variant?: "full" | "compact" | "mark" | "stacked";
   theme?: "light" | "dark";
   className?: string;
   imageClassName?: string;
-  size?: "sm" | "md" | "lg" | "xl" | "2xl" | "header";
+  size?: LogoSize;
 }
 
 export default function Logo({
@@ -29,18 +31,20 @@ export default function Logo({
   }[size];
 
   // Circular mark sizing for the badge
-  const markClasses = {
+  const markClasses: Record<LogoSize, string> = {
     sm: "w-11 h-11 p-1",
     md: "w-14 h-14 p-1.5",
     lg: "w-20 h-20 p-2",
     xl: "w-28 h-28 sm:w-32 sm:h-32 p-3",
-  }[size];
+    "2xl": "w-32 h-32 sm:w-36 sm:h-36 p-3.5",
+    header: "w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 p-2.5",
+  };
 
   // For mark-only variant (e.g. Brand Statement or Icon displays)
   if (variant === "mark") {
     return (
       <div
-        className={`inline-flex items-center justify-center rounded-full bg-white shadow-xl border-2 border-gold-500/60 overflow-hidden ${markClasses} ${className}`}
+        className={`inline-flex items-center justify-center rounded-full bg-white shadow-xl border-2 border-gold-500/60 overflow-hidden ${markClasses[size]} ${className}`}
       >
         <img
           src="/credtree-logo.png"
