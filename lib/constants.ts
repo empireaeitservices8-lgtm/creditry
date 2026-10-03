@@ -38,7 +38,6 @@ export const NAV_LINKS = [
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Solutions", href: "/#solutions" },
-  { label: "Why Credtree", href: "/#why-credtree" },
   { label: "Contact", href: "/#contact" },
 ];
 

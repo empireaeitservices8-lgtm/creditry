@@ -12,10 +12,8 @@ import {
   Home, 
   Briefcase, 
   Building2,
-  FileCheck2,
   ArrowRight
 } from "lucide-react";
-import { COMPANY_NAME, CONTACT_PERSON } from "@/lib/constants";
 
 export default function About() {
   return (
@@ -32,7 +30,6 @@ export default function About() {
         <SectionHeading
           eyebrow="Official Facilitation Mandate"
           title="Financial Solutions Built Around Your Goals"
-          subtitle="Where Credit Meets Growth & Security"
         />
 
         {/* ========================================================
@@ -141,16 +138,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Bottom Official Endorsement Footnote */}
-            <div className="relative z-10 mt-8 sm:mt-10 pt-5 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gold-200/70">
-              <span className="font-semibold text-gold-300">
-                Official Business Associate: {CONTACT_PERSON.name}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <FileCheck2 className="w-4 h-4 text-gold-400" />
-                <span>Ground Floor, Kamath Building, SN Park, Kannur - 1</span>
-              </span>
-            </div>
 
           </div>
         </div>

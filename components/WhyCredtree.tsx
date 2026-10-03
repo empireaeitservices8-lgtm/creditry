@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import { WHY_CREDTREE_POINTS, CONTACT_PERSON } from "@/lib/constants";
+import { WHY_CREDTREE_POINTS } from "@/lib/constants";
 import { Layers, UserCheck, TrendingUp, ShieldCheck, Check } from "lucide-react";
 
 export default function WhyCredtree() {
@@ -58,7 +58,7 @@ export default function WhyCredtree() {
                 <Check className="w-4 h-4 text-gold-600 shrink-0" />
                 <span>
                   {index === 0 && "Facilitation across credit, risk coverage, and capital planning."}
-                  {index === 1 && `Consult directly with ${CONTACT_PERSON.name}, Business Associate.`}
+                  {index === 1 && "Dedicated guidance and consultation for your financial enquiries."}
                   {index === 2 && "Structured roadmaps tailored around financial milestones."}
                   {index === 3 && "Integrated protection solutions designed to mitigate vulnerabilities."}
                 </span>
@@ -67,15 +67,6 @@ export default function WhyCredtree() {
           ))}
         </div>
 
-        {/* Centered Guidance Notice Strip */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-forest-800 text-ivory border border-gold-500/40 shadow-card-luxury text-center">
-          <h4 className="font-serif text-xl sm:text-2xl font-bold text-ivory">
-            Need Direct Guidance for Your Financial Application?
-          </h4>
-          <p className="mt-2 text-xs sm:text-sm text-gold-300 max-w-2xl mx-auto">
-            Speak directly with Business Associate {CONTACT_PERSON.name} at Kamath Building, SN Park, Kannur.
-          </p>
-        </div>
       </div>
     </section>
   );

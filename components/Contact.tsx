@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
 import Logo from "./Logo";
 import { Phone, Mail, MapPin, CheckCircle2 } from "lucide-react";
-import { CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
+import { CONTACT_INFO } from "@/lib/constants";
 
 export default function Contact() {
   return (
@@ -22,7 +22,7 @@ export default function Contact() {
           {/* Left Column: Official Business Associate Card */}
           <div className="lg:col-span-6 space-y-4">
             <span className="text-[11px] font-bold uppercase tracking-widest text-gold-700 block">
-              Official Business Associate Card
+              Official Business Card
             </span>
 
             {/* Physical Business Card Mockup */}
@@ -67,18 +67,9 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Right Half: Associate Details */}
-                <div className="sm:col-span-6 space-y-2.5">
-                  <div>
-                    <h4 className="font-serif text-lg sm:text-xl font-bold text-forest-900 leading-tight">
-                      {CONTACT_PERSON.name}
-                    </h4>
-                    <p className="text-xs font-semibold text-gold-800 uppercase tracking-wider mt-0.5">
-                      {CONTACT_PERSON.designation}
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 pt-2 text-xs">
+                {/* Right Half: Direct Contact Details */}
+                <div className="sm:col-span-6 space-y-3 flex flex-col justify-center">
+                  <div className="space-y-3 text-xs">
                     {/* Phone */}
                     <a
                       href={CONTACT_INFO.links.phoneCall}

@@ -25,15 +25,15 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-ivory/95 backdrop-blur-md shadow-card-luxury border-b border-gold-600/30 py-3"
-            : "bg-ivory/90 backdrop-blur-sm shadow-sm border-b border-gold-700/15 py-4"
+            ? "bg-ivory/95 backdrop-blur-md shadow-card-luxury border-b border-gold-600/30 py-1.5 sm:py-2"
+            : "bg-ivory/90 backdrop-blur-sm shadow-sm border-b border-gold-700/15 py-2 sm:py-2.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Brand Logo */}
             <div className="flex items-center">
-              <Logo size="md" variant="compact" />
+              <Logo size="header" variant="compact" />
             </div>
 
             {/* Desktop Navigation Links aligned to right */}
@@ -42,11 +42,11 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3.5 py-2 text-sm font-medium tracking-wide text-forest-900 transition-colors duration-200 hover:text-gold-700 rounded-md relative group"
+                  className="px-3.5 py-2 text-sm sm:text-[15px] font-bold tracking-wide text-forest-800 transition-colors duration-200 hover:text-forest-600 rounded-md relative group"
                 >
                   <span>{link.label}</span>
-                  {/* Subtle gold line indicator on hover */}
-                  <span className="absolute bottom-0 left-3.5 right-3.5 h-[1.5px] bg-gradient-to-r from-gold-600 to-gold-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                  {/* Subtle green/gold line indicator on hover */}
+                  <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gradient-to-r from-forest-800 via-forest-600 to-gold-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                 </Link>
               ))}
             </nav>
@@ -56,7 +56,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-md text-forest-900 hover:text-gold-700 hover:bg-forest-50 transition-colors focus:outline-none"
+                className="p-2.5 rounded-md text-forest-900 hover:text-forest-700 hover:bg-forest-50 transition-colors focus:outline-none"
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle navigation menu"
               >

@@ -255,7 +255,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
-            Gmail Address (@gmail.com) <span className="text-red-600">*</span>
+            Email Address <span className="text-red-600">*</span>
           </label>
           <input
             type="email"

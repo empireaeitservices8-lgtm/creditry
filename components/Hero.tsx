@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-ivory via-ivory-light to-ivory py-16 sm:py-20 lg:py-24"
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-ivory via-ivory-light to-ivory pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20"
     >
       {/* Background Architectural Grid & Subtle Radial Watermark */}
       <div className="absolute inset-0 bg-[radial-gradient(#C88A00_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04] pointer-events-none" />
@@ -18,16 +18,13 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headlines & Editorial Copy */}
           <div className="lg:col-span-7 text-left space-y-6 lg:pr-6">
-            {/* Brand Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-forest-800/10 border border-gold-600/30 text-forest-800 text-xs font-semibold tracking-[0.18em] uppercase">
-              <span className="w-1.5 h-1.5 rotate-45 bg-gold-600" />
-              <span>Credtree Financial Services</span>
-              <span className="text-gold-700">&bull;</span>
-              <span>Kannur</span>
-            </div>
+            {/* Brand Name */}
+            <p className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-gold-600 via-gold-400 to-gold-700 bg-clip-text text-transparent inline-block">
+              CredTree
+            </p>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-forest-900 tracking-tight leading-[1.12]">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-forest-900 tracking-tight leading-[1.15]">
               Where Credit Meets{" "}
               <span className="relative inline-block text-forest-800">
                 Growth &amp; Security
@@ -57,8 +54,7 @@ export default function Hero() {
             {/* Additional Factual Narrative Copy */}
             <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal max-w-2xl">
               Helping individuals and businesses explore financial solutions with clarity,
-              confidence and care. Based at Kamath Building, SN Park, Kannur, we facilitate
-              credit avenues and financial protection tailored to your long-term roadmap.
+              confidence and care.
             </p>
 
             {/* Pillar Badges */}

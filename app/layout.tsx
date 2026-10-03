@@ -52,7 +52,9 @@ export const metadata: Metadata = {
       "Credtree Financial Services facilitates loans, insurance, investment and wealth management services in Kannur.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/credtree-logo.png",
+    shortcut: "/credtree-logo.png",
+    apple: "/credtree-logo.png",
   },
 };
 

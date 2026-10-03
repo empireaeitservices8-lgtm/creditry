@@ -5,7 +5,6 @@ import Services from "@/components/Services";
 import FinancialSolutions from "@/components/FinancialSolutions";
 import HowWeHelp from "@/components/HowWeHelp";
 import WhyCredtree from "@/components/WhyCredtree";
-import BrandStatement from "@/components/BrandStatement";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -32,10 +31,7 @@ export default function HomePage() {
         {/* 7. Why Credtree */}
         <WhyCredtree />
 
-        {/* 8. Brand Statement */}
-        <BrandStatement />
-
-        {/* 9. Contact & Enquiry */}
+        {/* 8. Contact & Enquiry */}
         <Contact />
       </main>
 

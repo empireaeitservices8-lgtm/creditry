@@ -21,7 +21,7 @@ export default function Footer() {
         
         {/* Top Tier: Clean Centered Brand & Tagline */}
         <div className="flex flex-col items-center text-center space-y-2 pb-6 border-b border-forest-800/80">
-          <Logo variant="compact" theme="dark" size="lg" />
+          <Logo variant="compact" theme="dark" size="xl" />
           <p className="font-serif italic text-gold-300 text-sm sm:text-base font-normal">
             &ldquo;{TAGLINE}&rdquo;
           </p>
