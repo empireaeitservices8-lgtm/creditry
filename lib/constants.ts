@@ -37,9 +37,78 @@ export const NAV_LINKS = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
+  { label: "Insurance", href: "/#insurance-solutions" },
   { label: "Solutions", href: "/#solutions" },
   { label: "Contact", href: "/#contact" },
 ];
+
+export const INSURANCE_SOLUTIONS = [
+  {
+    id: "health-insurance",
+    title: "Health Insurance",
+    category: "Family & Medical Protection",
+    badge: "Cashless Network",
+    shortDesc: "Comprehensive medical hospitalization & health coverage for you and your family.",
+    detailedDesc:
+      "Safeguard your family against escalating medical costs with cashless hospitalization across accredited networks, pre/post-hospitalization care, and tax savings under Section 80D.",
+    features: [
+      "Cashless Hospitalization Network",
+      "Individual & Family Floater Options",
+      "Critical Illness & Day-Care Procedures",
+      "Tax Deductions under Section 80D",
+    ],
+    contactServiceKey: "Insurance - Health Insurance",
+  },
+  {
+    id: "motor-insurance",
+    title: "Motor Insurance",
+    category: "Vehicle & Liability Cover",
+    badge: "Instant Issue",
+    shortDesc: "All-inclusive protection for four-wheelers, two-wheelers, and commercial fleets.",
+    detailedDesc:
+      "Complete vehicular protection shielding private and commercial vehicles against accidents, theft, third-party liability, and natural calamities with prompt cashless claims.",
+    features: [
+      "Zero Depreciation (Bumper-to-Bumper)",
+      "24x7 Pan-India Roadside Assistance",
+      "Third-Party Liability & Own Damage",
+      "Swift Cashless Garage Settlements",
+    ],
+    contactServiceKey: "Insurance - Motor Insurance",
+  },
+  {
+    id: "home-loans-insurance",
+    title: "Home Loans & Protection",
+    category: "Property & Mortgage Shield",
+    badge: "Asset & Credit Security",
+    shortDesc: "End-to-end home loan facilitation coupled with mortgage and structural protection.",
+    detailedDesc:
+      "Fulfill your home ownership journey with structured home loans, paired with essential mortgage liability protection and property insurance protecting against structural damages.",
+    features: [
+      "Competitive Home Loan Facilitation",
+      "Loan Repayment Liability Shield",
+      "Building Structure & Contents Cover",
+      "Protection from Fire, Quake & Calamities",
+    ],
+    contactServiceKey: "Insurance - Home Loan & Protection",
+  },
+  {
+    id: "property-all-risk",
+    title: "Property All Risk (PAR)",
+    category: "Commercial & Industrial Shield",
+    badge: "Enterprise Grade",
+    shortDesc: "Comprehensive all-risk insurance shielding commercial, enterprise, and industrial assets.",
+    detailedDesc:
+      "Extensive Property All Risk (PAR) insurance safeguarding commercial complexes, warehouses, manufacturing units, plant machinery, and business stock against physical loss and perils.",
+    features: [
+      "Accidental Physical Loss & Damage",
+      "Plant, Machinery & Business Stock Cover",
+      "Fire, Explosion & Natural Allied Perils",
+      "Business Interruption Safeguards",
+    ],
+    contactServiceKey: "Insurance - Property All Risk (PAR)",
+  },
+];
+
 
 export const PRIMARY_SERVICES = [
   {

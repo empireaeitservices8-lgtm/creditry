@@ -11,7 +11,11 @@ const SERVICE_OPTIONS = [
   "Loan Against Property",
   "Business Loan",
   "Credit Card",
-  "Insurance",
+  "Insurance - Health Insurance",
+  "Insurance - Motor Insurance",
+  "Insurance - Home Loan & Protection",
+  "Insurance - Property All Risk (PAR)",
+  "Insurance (All Classes)",
   "Investment",
   "Wealth Management",
 ];
