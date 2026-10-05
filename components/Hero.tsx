@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import HeroVisual from "./HeroVisual";
+import CredtreeBrandText from "./CredtreeBrandText";
 
 export default function Hero() {
   return (
@@ -18,10 +19,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headlines & Editorial Copy */}
           <div className="lg:col-span-7 text-left space-y-6 lg:pr-6">
-            {/* Brand Name */}
-            <p className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-gold-600 via-gold-400 to-gold-700 bg-clip-text text-transparent inline-block">
-              CredTree
-            </p>
+            {/* Brand Identity as Pure Crisp Typography */}
+            <div className="pt-1">
+              <CredtreeBrandText size="lg" />
+            </div>
 
             {/* Main Headline */}
             <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-forest-900 tracking-tight leading-[1.15]">

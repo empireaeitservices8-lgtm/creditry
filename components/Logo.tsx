@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
+import CredtreeBrandText from "./CredtreeBrandText";
+
 export type LogoSize = "sm" | "md" | "lg" | "xl" | "2xl" | "header";
 
 interface LogoProps {
-  variant?: "full" | "compact" | "mark" | "stacked";
+  variant?: "full" | "compact" | "mark" | "stacked" | "wordmark";
   theme?: "light" | "dark";
   className?: string;
   imageClassName?: string;
@@ -39,6 +41,26 @@ export default function Logo({
     "2xl": "w-32 h-32 sm:w-36 sm:h-36 p-3.5",
     header: "w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 p-2.5",
   };
+
+  // For wordmark variant (the CREDTREE FINANCIAL SERVICES typography as pure text)
+  if (variant === "wordmark") {
+    const brandSize =
+      size === "header" || size === "2xl" || size === "xl"
+        ? "lg"
+        : size === "lg"
+        ? "md"
+        : "sm";
+
+    return (
+      <Link
+        href="/#home"
+        className={`group inline-flex items-center no-underline transition-all duration-200 hover:opacity-95 ${className}`}
+        aria-label="Credtree Financial Services - Home"
+      >
+        <CredtreeBrandText size={brandSize} />
+      </Link>
+    );
+  }
 
   // For mark-only variant (e.g. Brand Statement or Icon displays)
   if (variant === "mark") {
