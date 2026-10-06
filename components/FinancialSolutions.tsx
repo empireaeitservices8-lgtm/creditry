@@ -11,7 +11,6 @@ export default function FinancialSolutions() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="Complete Portfolio"
           title="Explore Our Financial Solutions"
           subtitle="A comprehensive spectrum of credit facilitation and wealth distribution services"
         />
@@ -24,10 +23,7 @@ export default function FinancialSolutions() {
               className="group relative p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm hover:border-gold-600/60 hover:shadow-card-luxury transition-all duration-200 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gold-700 bg-gold-50 px-2.5 py-0.5 rounded border border-gold-200">
-                    {item.category}
-                  </span>
+                <div className="flex items-center justify-end mb-3">
                   <span className="font-serif text-xs font-bold text-charcoal-400 group-hover:text-forest-800 transition-colors">
                     #{index + 1 < 10 ? `0${index + 1}` : index + 1}
                   </span>
@@ -44,7 +40,7 @@ export default function FinancialSolutions() {
 
               <div className="mt-6 pt-3 border-t border-forest-50 flex items-center justify-between">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-xs font-semibold text-forest-800 group-hover:text-gold-700 inline-flex items-center gap-1 transition-colors"
                 >
                   <span>Enquire Option</span>

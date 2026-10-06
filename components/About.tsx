@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import SectionHeading from "./SectionHeading";
 import GoldDivider from "./GoldDivider";
 import { 
@@ -28,7 +29,6 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <SectionHeading
-          eyebrow="Official Facilitation Mandate"
           title="Financial Solutions Built Around Your Goals"
         />
 
@@ -90,9 +90,6 @@ export default function About() {
                 </span>
                 <Sparkles className="w-4 h-4 text-gold-300" />
               </div>
-              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-gold-200/80">
-                Credtree Financial Services &bull; Operating Mandate
-              </p>
             </div>
 
             {/* Verbatim Business Objective Quote */}
@@ -156,11 +153,7 @@ export default function About() {
                 <Layers className="w-7 h-7" />
               </div>
 
-              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-800 bg-gold-50 px-3 py-1 rounded-md border border-gold-200">
-                Secured &amp; Unsecured Credit
-              </span>
-
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mt-4 mb-2.5">
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mb-2.5">
                 Credit &amp; Loan Facilitation
               </h4>
 
@@ -186,7 +179,7 @@ export default function About() {
 
             <div className="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between">
               <a
-                href="#contact"
+                href="/contact"
                 className="text-xs font-bold uppercase tracking-wider text-forest-900 group-hover:text-gold-700 inline-flex items-center gap-1.5 transition-colors"
               >
                 <span>Request Loan Consultation</span>
@@ -204,11 +197,7 @@ export default function About() {
                 <ShieldCheck className="w-7 h-7" />
               </div>
 
-              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-800 bg-gold-50 px-3 py-1 rounded-md border border-gold-200">
-                Risk &amp; Liquidity Solutions
-              </span>
-
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mt-4 mb-2.5">
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mb-2.5">
                 Insurance &amp; Financial Products
               </h4>
 
@@ -234,7 +223,7 @@ export default function About() {
 
             <div className="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between">
               <a
-                href="#contact"
+                href="/contact"
                 className="text-xs font-bold uppercase tracking-wider text-forest-900 group-hover:text-gold-700 inline-flex items-center gap-1.5 transition-colors"
               >
                 <span>Explore Protection</span>
@@ -252,11 +241,7 @@ export default function About() {
                 <TrendingUp className="w-7 h-7" />
               </div>
 
-              <span className="text-[11px] font-bold uppercase tracking-wider text-gold-800 bg-gold-50 px-3 py-1 rounded-md border border-gold-200">
-                Sustainable Growth
-              </span>
-
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mt-4 mb-2.5">
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 mb-2.5">
                 Wealth &amp; Investments
               </h4>
 
@@ -282,7 +267,7 @@ export default function About() {
 
             <div className="mt-8 pt-4 border-t border-gold-600/15 flex items-center justify-between">
               <a
-                href="#contact"
+                href="/contact"
                 className="text-xs font-bold uppercase tracking-wider text-forest-900 group-hover:text-gold-700 inline-flex items-center gap-1.5 transition-colors"
               >
                 <span>Plan Your Wealth</span>
@@ -312,7 +297,7 @@ export default function About() {
           </div>
 
           <a
-            href="#contact"
+            href="/contact"
             className="shrink-0 px-6 py-3 rounded-xl bg-forest-800 text-ivory text-xs font-bold uppercase tracking-wider hover:bg-forest-900 transition-colors shadow-sm"
           >
             Direct Associate Contact

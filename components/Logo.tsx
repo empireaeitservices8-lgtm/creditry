@@ -13,6 +13,31 @@ interface LogoProps {
   size?: LogoSize;
 }
 
+/**
+ * Hidden SVG filter that removes the PNG's baked-in white background so the
+ * logo can sit directly on dark surfaces.
+ * - Alpha: near-white pixels become fully transparent.
+ * - Color: dark-green artwork (low red) is lifted to ivory, while gold
+ *   artwork (high red) stays gold, keeping contrast on forest-green.
+ */
+const DARK_KNOCKOUT_FILTER_ID = "credtree-logo-dark-knockout";
+
+function DarkKnockoutFilter() {
+  return (
+    <svg width="0" height="0" aria-hidden="true" focusable="false" className="absolute">
+      <filter id={DARK_KNOCKOUT_FILTER_ID} colorInterpolationFilters="sRGB">
+        <feColorMatrix
+          type="matrix"
+          values="-0.17 0 0 0 0.98
+                  -0.42 0 0 0 0.95
+                  -1.00 0 0 0 0.88
+                  -2 -2 -2 0 5.4"
+        />
+      </filter>
+    </svg>
+  );
+}
+
 export default function Logo({
   variant = "full",
   theme = "light",
@@ -82,17 +107,17 @@ export default function Logo({
   if (variant === "stacked") {
     return (
       <div className={`flex flex-col items-center text-center ${className}`}>
+        {isDark && <DarkKnockoutFilter />}
         <div
-          className={`rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 ${
-            isDark
-              ? "bg-white p-3 shadow-2xl border border-gold-500/50"
-              : "bg-transparent mix-blend-multiply"
+          className={`transition-transform duration-300 hover:scale-105 ${
+            isDark ? "bg-transparent" : "bg-transparent mix-blend-multiply"
           }`}
         >
           <img
             src="/credtree-logo.png"
             alt="Credtree Financial Services Logo"
             className={`${sizeClasses} w-auto object-contain`}
+            style={isDark ? { filter: `url(#${DARK_KNOCKOUT_FILTER_ID})` } : undefined}
             loading="eager"
           />
         </div>
@@ -110,17 +135,19 @@ export default function Logo({
       className={`group inline-flex items-center no-underline transition-all duration-200 hover:opacity-95 ${className}`}
       aria-label="Credtree Financial Services - Home"
     >
+      {isDark && <DarkKnockoutFilter />}
       <div
         className={`relative flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02] ${
-          isDark
-            ? "bg-white/95 backdrop-blur-sm p-1.5 sm:p-2 rounded-xl shadow-lg border border-gold-500/40"
-            : "mix-blend-multiply"
+          isDark ? "bg-transparent" : "mix-blend-multiply"
         }`}
       >
         <img
           src="/credtree-logo.png"
           alt="Credtree Financial Services"
-          className={`${imageClassName || sizeClasses} w-auto object-contain filter drop-shadow-sm`}
+          className={`${imageClassName || sizeClasses} w-auto object-contain ${
+            isDark ? "" : "filter drop-shadow-sm"
+          }`}
+          style={isDark ? { filter: `url(#${DARK_KNOCKOUT_FILTER_ID})` } : undefined}
           loading="eager"
         />
       </div>

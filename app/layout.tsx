@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { COMPANY_NAME, TAGLINE, CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
 
 const playfair = Playfair_Display({
@@ -95,17 +96,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${manrope.variable} scroll-smooth`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased selection:bg-gold-500 selection:text-white">
+      <body className="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased selection:bg-gold-500 selection:text-white flex flex-col justify-between">
         {/* Fixed Header on all pages */}
         <Navbar />
-        <div className="pt-[72px] sm:pt-[80px]">
+        <main className="flex-1 pt-[72px] sm:pt-[80px]">
           {children}
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );

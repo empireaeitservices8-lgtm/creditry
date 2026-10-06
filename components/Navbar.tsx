@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 import { NAV_LINKS, CONTACT_INFO } from "@/lib/constants";
@@ -9,6 +10,7 @@ import { NAV_LINKS, CONTACT_INFO } from "@/lib/constants";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,17 +40,26 @@ export default function Navbar() {
 
             {/* Desktop Navigation Links aligned to right */}
             <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 ml-auto" aria-label="Main Navigation">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-3.5 py-2 text-sm sm:text-[15px] font-bold tracking-wide text-forest-800 transition-colors duration-200 hover:text-forest-600 rounded-md relative group"
-                >
-                  <span>{link.label}</span>
-                  {/* Subtle green/gold line indicator on hover */}
-                  <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gradient-to-r from-forest-800 via-forest-600 to-gold-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
-                </Link>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`px-3.5 py-2 text-sm sm:text-[15px] font-bold tracking-wide transition-colors duration-200 rounded-md relative group ${
+                      isActive ? "text-gold-700 font-extrabold" : "text-forest-800 hover:text-forest-600"
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    {/* Active or hover indicator line */}
+                    <span
+                      className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gradient-to-r from-forest-800 via-forest-600 to-gold-500 transition-transform duration-200 origin-left ${
+                        isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Mobile Hamburger Button */}

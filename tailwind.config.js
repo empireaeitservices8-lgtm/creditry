@@ -43,8 +43,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Playfair Display", "Cormorant Garamond", "Georgia", "serif"],
-        sans: ["var(--font-manrope)", "Manrope", "Inter", "system-ui", "sans-serif"],
+        serif: ["var(--font-playfair)", "'Playfair Display'", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "'Plus Jakarta Sans'", "var(--font-manrope)", "'Manrope'", "Inter", "-apple-system", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -5,27 +5,28 @@ import {
   COMPANY_NAME,
   TAGLINE,
   CONTACT_INFO,
-  DISCLAIMER_TEXT,
 } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-forest-900 text-ivory border-t border-gold-600/30 relative overflow-hidden">
+    <footer className="bg-forest-900 text-ivory relative overflow-hidden">
+      {/* Top Tier: Brand Logo on Ivory band so the logo shows in its true colours */}
+      <div className="bg-ivory border-t border-gold-600/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col items-center text-center space-y-2">
+          <Logo variant="compact" theme="light" imageClassName="h-32 sm:h-40" />
+          <p className="font-serif italic text-gold-800 text-sm sm:text-base font-medium">
+            &ldquo;{TAGLINE}&rdquo;
+          </p>
+        </div>
+      </div>
+
       {/* Decorative Gold Hairline with Central Diamond Ornament */}
       <div className="relative">
         <div className="h-[2px] bg-gradient-to-r from-transparent via-gold-500 to-transparent" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-gold-500 shadow-sm border border-forest-900" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10 relative z-10">
-        
-        {/* Top Tier: Clean Centered Brand & Tagline */}
-        <div className="flex flex-col items-center text-center space-y-2 pb-6 border-b border-forest-800/80">
-          <Logo variant="compact" theme="dark" size="xl" />
-          <p className="font-serif italic text-gold-300 text-sm sm:text-base font-normal">
-            &ldquo;{TAGLINE}&rdquo;
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10 relative z-10">
 
         {/* Middle Tier: Official Contact Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 border-b border-forest-800/80 text-xs text-ivory/85 max-w-4xl mx-auto">
@@ -89,14 +90,9 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Tier: Discreet Disclaimer & Clean Copyright */}
-        <div className="pt-6 space-y-3 text-center text-xs text-ivory/60">
-          <p className="text-[11px] text-ivory/50 leading-relaxed max-w-3xl mx-auto">
-            <strong className="text-gold-400/80">Disclaimer: </strong>
-            {DISCLAIMER_TEXT}
-          </p>
-
-          <p className="pt-2 text-[11px] text-ivory/50">
+        {/* Bottom Tier: Clean Copyright */}
+        <div className="pt-6 text-center text-xs text-ivory/60">
+          <p className="text-[11px] text-ivory/50">
             &copy; 2026 {COMPANY_NAME}. All rights reserved. &bull; Kannur, Kerala
           </p>
         </div>

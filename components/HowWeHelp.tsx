@@ -77,13 +77,7 @@ export default function HowWeHelp() {
           ))}
         </div>
 
-        {/* Advisory Process Note */}
-        <div className="mt-12 p-4 rounded-xl bg-forest-50/80 border border-forest-100 text-center max-w-2xl mx-auto">
-          <p className="text-xs text-charcoal-600 leading-relaxed">
-            * Process descriptions outline our procedural consultation methodology and do not
-            constitute approval guarantees or predetermined financial outcomes.
-          </p>
-        </div>
+
       </div>
     </section>
   );

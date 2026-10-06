@@ -34,12 +34,11 @@ export const CONTACT_INFO = {
 };
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
-  { label: "Services", href: "/#services" },
-  { label: "Insurance", href: "/#insurance-solutions" },
-  { label: "Solutions", href: "/#solutions" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const INSURANCE_SOLUTIONS = [
