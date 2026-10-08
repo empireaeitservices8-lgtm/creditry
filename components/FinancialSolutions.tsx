@@ -23,12 +23,6 @@ export default function FinancialSolutions() {
               className="group relative p-6 rounded-xl bg-white border border-gold-600/20 shadow-sm hover:border-gold-600/60 hover:shadow-card-luxury transition-all duration-200 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-end mb-3">
-                  <span className="font-serif text-xs font-bold text-charcoal-400 group-hover:text-forest-800 transition-colors">
-                    #{index + 1 < 10 ? `0${index + 1}` : index + 1}
-                  </span>
-                </div>
-
                 <h3 className="font-serif text-lg sm:text-xl font-bold text-forest-900 group-hover:text-forest-800 transition-colors">
                   {item.title}
                 </h3>

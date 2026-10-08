@@ -40,8 +40,8 @@ export default function WhyCredtree() {
                   <div className="w-12 h-12 rounded-xl bg-forest-800 text-gold-400 flex items-center justify-center border border-gold-500/30">
                     {getPointIcon(point.icon)}
                   </div>
-                  <span className="font-serif text-sm font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
-                    Pillar 0{index + 1}
+                  <span className="font-serif text-xs font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200 uppercase tracking-wider">
+                    Core Pillar
                   </span>
                 </div>
 

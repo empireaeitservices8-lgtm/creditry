@@ -30,8 +30,8 @@ export default function Services() {
             <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700" />
           </div>
 
-          <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal">
-            Direct facilitation for your personal, enterprise, and family financial goals
+          <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal max-w-3xl mx-auto">
+            Quick and easy solutions for loans, insurance, investment and credit cards of multiple banks and NBFC&apos;s. One stop solutions for all your financial needs.
           </p>
         </div>
 
@@ -43,32 +43,42 @@ export default function Services() {
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
             <div>
-              {/* Reference-Accurate Home Loan Icon: Green House with Gold Roof & Chimney */}
-              <div className="flex items-center justify-between mb-6">
+              {/* Reference-Accurate Home Loan Icon: Sleek Architectural Villa in Green & Gold */}
+              <div className="mb-6">
                 <div className="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2.5 flex items-center justify-center shadow-sm">
                   <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
-                    {/* Chimney */}
-                    <rect x="42" y="16" width="6" height="12" fill="#C88A00" rx="1" />
-                    {/* House Body */}
-                    <rect x="16" y="28" width="32" height="26" fill="#003F2D" rx="2" />
-                    {/* Roof */}
-                    <polygon points="32,8 10,28 54,28" fill="#C88A00" stroke="#B87900" strokeWidth="1.5" />
-                    {/* Window */}
-                    <rect x="22" y="34" width="7" height="7" fill="#FFFFFF" rx="1" />
-                    <line x1="25.5" y1="34" x2="25.5" y2="41" stroke="#003F2D" strokeWidth="1" />
-                    <line x1="22" y1="37.5" x2="29" y2="37.5" stroke="#003F2D" strokeWidth="1" />
-                    {/* Door */}
-                    <rect x="35" y="36" width="8" height="18" fill="#FFFFFF" rx="1" />
-                    <circle cx="37" cy="45" r="1" fill="#003F2D" />
+                    {/* Roof & House Body in Deep Forest Green with Gold Border */}
+                    <path
+                      d="M32 8 L54 26 H46 V52 H18 V26 H10 Z"
+                      fill="#003F2D"
+                      stroke="#C88A00"
+                      strokeWidth="2.5"
+                      strokeLinejoin="round"
+                    />
+                    {/* Golden Roof Trim / Apex */}
+                    <path
+                      d="M8 27 L32 8 L56 27"
+                      stroke="#F2C14E"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    {/* Symmetrical Upper Windows in Gold */}
+                    <rect x="22" y="31" width="7" height="7" rx="1.5" fill="#F2C14E" />
+                    <rect x="35" y="31" width="7" height="7" rx="1.5" fill="#F2C14E" />
+                    {/* Welcoming Central Arched Entryway in Rich Gold */}
+                    <path
+                      d="M28 52 V44 C28 41.8 29.8 40 32 40 C34.2 40 36 41.8 36 44 V52 H28 Z"
+                      fill="#C88A00"
+                    />
+                    {/* Horizontal Foundation Line */}
+                    <line x1="12" y1="54" x2="52" y2="54" stroke="#C88A00" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                 </div>
-                <span className="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500 transition-colors">
-                  01
-                </span>
               </div>
 
               <div className="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
-                Secured Credit
+                Trusted Homefinance
               </div>
 
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 group-hover:text-forest-800 transition-colors">
@@ -76,11 +86,7 @@ export default function Services() {
               </h3>
 
               <p className="mt-3 text-sm text-charcoal-700 leading-relaxed font-normal">
-                &ldquo;Financial assistance for your home ownership journey.&rdquo;
-              </p>
-
-              <p className="mt-2 text-xs text-charcoal-500 leading-relaxed italic border-t border-forest-50 pt-2">
-                Residential purchases, plot loans &amp; home construction facilitation.
+                Purchase of land, purchase of house, purchase of land + house, Home improvement /Renovation.
               </p>
             </div>
 
@@ -98,26 +104,34 @@ export default function Services() {
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
             <div>
-              {/* Reference-Accurate Business Loan Icon: Green Briefcase with Gold Latch & Handle */}
-              <div className="flex items-center justify-between mb-6">
+              {/* Commercial Enterprise Growth Logo */}
+              <div className="mb-6">
                 <div className="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2.5 flex items-center justify-center shadow-sm">
                   <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
-                    {/* Handle */}
-                    <path d="M24 18 C24 12 40 12 40 18" stroke="#C88A00" strokeWidth="3" strokeLinecap="round" />
-                    {/* Briefcase Body */}
-                    <rect x="12" y="18" width="40" height="32" rx="4" fill="#003F2D" />
-                    {/* Front Flap Line */}
-                    <path d="M12 28 L32 38 L52 28" stroke="#C88A00" strokeWidth="1.5" />
-                    {/* Gold Center Clasp / Lock */}
-                    <rect x="29" y="34" width="6" height="7" rx="1.5" fill="#F2C14E" stroke="#C88A00" strokeWidth="1" />
-                    {/* Gold Bottom Corners */}
-                    <path d="M12 44 L18 50 L12 50 Z" fill="#C88A00" />
-                    <path d="M52 44 L46 50 L52 50 Z" fill="#C88A00" />
+                    {/* Baseline / Foundation */}
+                    <line x1="10" y1="52" x2="54" y2="52" stroke="#C88A00" strokeWidth="2.5" strokeLinecap="round" />
+                    {/* Main Corporate Tower */}
+                    <rect x="15" y="16" width="18" height="36" rx="2" fill="#003F2D" stroke="#C88A00" strokeWidth="2" />
+                    {/* Secondary Corporate Wing */}
+                    <rect x="33" y="26" width="16" height="26" rx="2" fill="#003F2D" stroke="#C88A00" strokeWidth="2" />
+                    {/* Windows Tower 1 */}
+                    <rect x="19" y="22" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="25" y="22" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="19" y="29" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="25" y="29" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="19" y="36" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="25" y="36" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="19" y="43" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    <rect x="25" y="43" width="4" height="4" rx="0.5" fill="#F2C14E" />
+                    {/* Windows Tower 2 */}
+                    <rect x="37" y="31" width="8" height="3" rx="0.5" fill="#F2C14E" />
+                    <rect x="37" y="37" width="8" height="3" rx="0.5" fill="#F2C14E" />
+                    <rect x="37" y="43" width="8" height="3" rx="0.5" fill="#F2C14E" />
+                    {/* Ascending Expansion Arrow */}
+                    <path d="M34 14 L49 14 L49 29" stroke="#F2C14E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                    <line x1="26" y1="36" x2="49" y2="14" stroke="#F2C14E" strokeWidth="3" strokeLinecap="round" />
                   </svg>
                 </div>
-                <span className="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500 transition-colors">
-                  02
-                </span>
               </div>
 
               <div className="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
@@ -152,7 +166,7 @@ export default function Services() {
 
             <div>
               {/* Insurance Icon: Green Shield with Gold Rim & Checkmark */}
-              <div className="flex items-center justify-between mb-6">
+              <div className="mb-6">
                 <div className="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2.5 flex items-center justify-center shadow-sm">
                   <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
                     {/* Protective Shield: green body with gold rim */}
@@ -180,13 +194,10 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <span className="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500 transition-colors">
-                  03
-                </span>
               </div>
 
               <div className="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
-                Risk Protection
+                Health &bull; Motor &bull; Property
               </div>
 
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-forest-900 group-hover:text-forest-800 transition-colors">
@@ -194,11 +205,11 @@ export default function Services() {
               </h3>
 
               <p className="mt-3 text-sm text-charcoal-700 leading-relaxed font-normal">
-                &ldquo;Insurance solutions designed to help protect what matters.&rdquo;
+                Health, Motor, Property.
               </p>
 
               <p className="mt-2 text-xs text-charcoal-500 leading-relaxed italic border-t border-forest-50 pt-2">
-                Life, health, motor &amp; property protection portfolio distribution.
+                Total insurance for personal and commercial needs.
               </p>
             </div>
 
@@ -216,7 +227,7 @@ export default function Services() {
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
             <div>
-              <div className="flex items-center justify-between mb-6">
+              <div className="mb-6">
                 <div className="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2.5 flex items-center justify-center shadow-sm">
                   <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
                     <line x1="12" y1="50" x2="52" y2="50" stroke="#C88A00" strokeWidth="2" strokeLinecap="round" />
@@ -228,9 +239,6 @@ export default function Services() {
                     <path d="M38 14 L49 13 L47 24" stroke="#F2C14E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="font-serif text-2xl font-bold text-gold-300 group-hover:text-gold-500 transition-colors">
-                  04
-                </span>
               </div>
 
               <div className="inline-block px-2.5 py-0.5 mb-3 rounded text-[11px] font-semibold tracking-wider uppercase text-gold-800 bg-gold-50 border border-gold-200">
@@ -282,8 +290,8 @@ export default function Services() {
             </div>
           </div>
 
-          {/* 4 Cards Grid - Health Insurance, Motor Insurance, Home Loans, Property All Risk */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {/* 3 Cards Grid - Health Insurance, Motor Insurance, Property Insurance */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             
             {/* 1. HEALTH INSURANCE */}
             <div className="group relative flex flex-col justify-between p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
@@ -453,77 +461,7 @@ export default function Services() {
               </div>
             </div>
 
-            {/* 3. HOME LOANS & MORTGAGE PROTECTION */}
-            <div className="group relative flex flex-col justify-between p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-
-              <div>
-                <div className="mb-5">
-                  {/* Custom Dual-Tone Home Loans & Protection SVG */}
-                  <div className="w-16 h-16 rounded-xl bg-forest-50 border border-gold-500/40 p-2.5 flex items-center justify-center shadow-sm">
-                    <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
-                      {/* Chimney */}
-                      <rect x="42" y="16" width="6" height="12" fill="#C88A00" rx="1" />
-                      {/* House Body in Deep Forest Green */}
-                      <rect x="14" y="28" width="36" height="26" fill="#003F2D" rx="2" />
-                      {/* Roof in Gold */}
-                      <polygon points="32,8 8,28 56,28" fill="#C88A00" stroke="#B87900" strokeWidth="1.5" />
-                      {/* Window */}
-                      <rect x="20" y="34" width="8" height="8" fill="#FFFFFF" rx="1" />
-                      <line x1="24" y1="34" x2="24" y2="42" stroke="#003F2D" strokeWidth="1" />
-                      <line x1="20" y1="38" x2="28" y2="38" stroke="#003F2D" strokeWidth="1" />
-                      {/* Protective Shield at Doorway */}
-                      <path d="M38 34 C44 34 46 37 46 42 C46 48 38 52 38 52 C38 52 30 48 30 42 C30 37 32 34 38 34 Z" fill="#C88A00" />
-                      <path d="M38 36 C42 36 44 38.5 44 42 C44 46.5 38 49.5 38 49.5 C38 49.5 32 46.5 32 42 C32 38.5 34 36 38 36 Z" fill="#F2C14E" />
-                      <circle cx="38" cy="41" r="1.5" fill="#003F2D" />
-                      <path d="M37 42.5 L39 42.5 L38.5 45.5 H37.5 Z" fill="#003F2D" />
-                    </svg>
-                  </div>
-                </div>
-
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-forest-700 mb-1">
-                  Property &amp; Credit Shield
-                </div>
-
-                <h4 className="font-serif text-xl font-bold text-forest-900 group-hover:text-forest-800 transition-colors">
-                  HOME LOANS &amp; PROTECTION
-                </h4>
-
-                <p className="mt-2.5 text-xs sm:text-sm text-charcoal-600 leading-relaxed font-normal">
-                  End-to-end home loan facilitation coupled with mortgage repayment protection and structural coverage to safeguard your family and real estate investment.
-                </p>
-
-                {/* Key Bullet Highlights */}
-                <ul className="mt-4 space-y-2 text-xs text-charcoal-700 border-t border-forest-50 pt-3">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Competitive Home Loan Facilitation</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Mortgage Repayment Liability Shield</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Building Structure &amp; Contents Cover</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Natural Calamity &amp; Fire Protection</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-gold-600/15 flex items-center justify-between text-xs font-semibold text-forest-800 group-hover:text-gold-700 transition-colors">
-                <a href="/contact" className="inline-flex items-center gap-1.5">
-                  <span>Enquire Home Loan / Cover</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-gold-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
-                <span className="w-1.5 h-1.5 rotate-45 bg-gold-500" />
-              </div>
-            </div>
-
-            {/* 4. PROPERTY ALL RISK (PAR) */}
+            {/* 3. PROPERTY INSURANCE (PAR) */}
             <div className="group relative flex flex-col justify-between p-7 rounded-xl bg-white border border-gold-600/30 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 

@@ -63,7 +63,6 @@ export default function Footer() {
               >
                 {CONTACT_INFO.email}
               </a>
-              <span className="text-[11px] text-ivory/60">Enquiries &amp; Consultations</span>
             </div>
           </div>
 
@@ -84,7 +83,6 @@ export default function Footer() {
               >
                 {CONTACT_INFO.websiteDisplay}
               </a>
-              <span className="text-[11px] text-ivory/60">Kannur, Kerala</span>
             </div>
           </div>
 

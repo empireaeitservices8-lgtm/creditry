@@ -49,28 +49,28 @@ export default function Hero() {
 
             {/* Supporting Headline */}
             <p className="font-serif italic text-lg sm:text-xl lg:text-2xl text-gold-800 font-medium leading-snug">
-              Smart financial solutions for loans, insurance, investments and wealth management.
+              Simplifying loans, insurance and investments.
             </p>
 
             {/* Additional Factual Narrative Copy */}
             <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal max-w-2xl">
-              Helping individuals and businesses explore financial solutions with clarity,
-              confidence and care.
+              Helping individuals and businesses explore financial solutions with expertise,
+              flexible options and complete transparency.
             </p>
 
             {/* Pillar Badges */}
             <div className="grid grid-cols-3 gap-3 pt-2 max-w-lg">
               <div className="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
                 <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                <span className="text-xs font-semibold text-forest-900">Clarity</span>
+                <span className="text-xs font-semibold text-forest-900">Expertise</span>
               </div>
               <div className="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
                 <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                <span className="text-xs font-semibold text-forest-900">Confidence</span>
+                <span className="text-xs font-semibold text-forest-900">Flexible</span>
               </div>
               <div className="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
                 <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                <span className="text-xs font-semibold text-forest-900">Care</span>
+                <span className="text-xs font-semibold text-forest-900">Transparent</span>
               </div>
             </div>
 

@@ -206,9 +206,6 @@ export default function ContactForm() {
         <h3 className="font-serif text-2xl font-bold text-forest-900">
           Send a Financial Service Enquiry
         </h3>
-        <p className="text-xs text-charcoal-600 mt-1">
-          Direct consultation with Brijesh Gangadharan, Business Associate &bull; Credtree Kannur
-        </p>
       </div>
 
       {/* Name Field */}
@@ -329,11 +326,6 @@ export default function ContactForm() {
         <Send className="w-4 h-4 text-gold-400 transition-transform group-hover:translate-x-1" />
         <span>{isSubmitting ? "Processing Enquiry..." : "Send Enquiry"}</span>
       </button>
-
-      <p className="text-[11px] text-charcoal-500 text-center pt-1 leading-normal">
-        Your enquiry details are treated with strict confidentiality. Direct facilitation by
-        Credtree Financial Services, Kamath Building, Kannur.
-      </p>
     </form>
   );
 }

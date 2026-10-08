@@ -20,7 +20,7 @@ export default function CredtreeBrandText({
       diamond: "w-1.5 h-1.5",
       diamondRow: "w-[50%] mt-1",
       row2Margin: "mt-1.5",
-      credTreeGap: "ml-2",
+      credTreeGap: "",
     },
     md: {
       title: "text-2xl sm:text-3xl tracking-[0.14em]",
@@ -29,7 +29,7 @@ export default function CredtreeBrandText({
       diamond: "w-2 h-2",
       diamondRow: "w-[52%] mt-1",
       row2Margin: "mt-2",
-      credTreeGap: "ml-2.5",
+      credTreeGap: "",
     },
     lg: {
       title: "text-3xl sm:text-4xl md:text-5xl lg:text-[52px] tracking-[0.14em]",
@@ -38,7 +38,7 @@ export default function CredtreeBrandText({
       diamond: "w-2 h-2 sm:w-2.5 sm:h-2.5",
       diamondRow: "w-[54%] mt-1 sm:mt-1.5",
       row2Margin: "mt-2 sm:mt-2.5",
-      credTreeGap: "ml-3 sm:ml-4",
+      credTreeGap: "",
     },
     xl: {
       title: "text-4xl sm:text-5xl md:text-6xl tracking-[0.15em]",
@@ -47,7 +47,7 @@ export default function CredtreeBrandText({
       diamond: "w-2.5 h-2.5 sm:w-3 sm:h-3",
       diamondRow: "w-[55%] mt-1.5 sm:mt-2",
       row2Margin: "mt-2.5 sm:mt-3",
-      credTreeGap: "ml-3.5 sm:ml-5",
+      credTreeGap: "",
     },
   }[size];
 
@@ -62,14 +62,11 @@ export default function CredtreeBrandText({
       <div
         className={`flex items-baseline font-serif font-black leading-none ${config.title}`}
       >
-        {/* CRED - Deep Forest Green */}
         <span className="text-[#063B28] filter drop-shadow-[0_1px_1px_rgba(6,59,40,0.25)]">
           CRED
         </span>
-
-        {/* TREE - Rich Metallic Gold Gradient */}
         <span
-          className={`${config.credTreeGap} bg-gradient-to-b from-[#F5D88D] via-[#D8A635] via-[48%] via-[#B57B18] to-[#875507] bg-clip-text text-transparent filter drop-shadow-[0_1px_1px_rgba(135,85,7,0.3)]`}
+          className="bg-gradient-to-b from-[#F5D88D] via-[#D8A635] via-[48%] via-[#B57B18] to-[#875507] bg-clip-text text-transparent filter drop-shadow-[0_1px_1px_rgba(135,85,7,0.3)]"
         >
           TREE
         </span>

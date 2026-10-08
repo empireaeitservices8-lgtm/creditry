@@ -75,36 +75,20 @@ export const INSURANCE_SOLUTIONS = [
     contactServiceKey: "Insurance - Motor Insurance",
   },
   {
-    id: "home-loans-insurance",
-    title: "Home Loans & Protection",
-    category: "Property & Mortgage Shield",
-    badge: "Asset & Credit Security",
-    shortDesc: "End-to-end home loan facilitation coupled with mortgage and structural protection.",
-    detailedDesc:
-      "Fulfill your home ownership journey with structured home loans, paired with essential mortgage liability protection and property insurance protecting against structural damages.",
-    features: [
-      "Competitive Home Loan Facilitation",
-      "Loan Repayment Liability Shield",
-      "Building Structure & Contents Cover",
-      "Protection from Fire, Quake & Calamities",
-    ],
-    contactServiceKey: "Insurance - Home Loan & Protection",
-  },
-  {
     id: "property-all-risk",
-    title: "Property All Risk (PAR)",
-    category: "Commercial & Industrial Shield",
-    badge: "Enterprise Grade",
-    shortDesc: "Comprehensive all-risk insurance shielding commercial, enterprise, and industrial assets.",
+    title: "Property Insurance",
+    category: "Commercial & Residential Shield",
+    badge: "Asset Protection",
+    shortDesc: "Comprehensive all-risk insurance shielding commercial and residential property assets.",
     detailedDesc:
-      "Extensive Property All Risk (PAR) insurance safeguarding commercial complexes, warehouses, manufacturing units, plant machinery, and business stock against physical loss and perils.",
+      "Extensive Property insurance safeguarding residential buildings, commercial complexes, warehouses, plant machinery, and business stock against physical loss and perils.",
     features: [
       "Accidental Physical Loss & Damage",
       "Plant, Machinery & Business Stock Cover",
       "Fire, Explosion & Natural Allied Perils",
       "Business Interruption Safeguards",
     ],
-    contactServiceKey: "Insurance - Property All Risk (PAR)",
+    contactServiceKey: "Insurance - Property Insurance",
   },
 ];
 
@@ -115,7 +99,7 @@ export const PRIMARY_SERVICES = [
     title: "HOME LOAN",
     description: "Financial assistance for your home ownership journey.",
     icon: "Home",
-    badge: "Secured Credit",
+    badge: "Trusted Homefinance",
     highlight: "Custom guidance for residential property purchases & construction",
   },
   {
@@ -149,7 +133,7 @@ export const BROADER_SERVICES = [
     id: "home-loans",
     title: "HOME LOANS",
     category: "Secured Lending",
-    detail: "Facilitating financial solutions for new purchases, plot purchases, and construction.",
+    detail: "Purchase of land, purchase of house, purchase of land + house, Home improvement /Renovation.",
   },
   {
     id: "personal-loans",
@@ -167,7 +151,7 @@ export const BROADER_SERVICES = [
     id: "loans-against-property",
     title: "LOANS AGAINST PROPERTY",
     category: "Secured Lending",
-    detail: "Unlocking liquidity from residential or commercial real estate assets.",
+    detail: "Pledging commercial, residential property for fundraising.",
   },
   {
     id: "business-loans",

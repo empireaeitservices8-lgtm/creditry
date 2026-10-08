@@ -127,14 +127,6 @@ export default function Contact() {
                 <span className="text-xs font-semibold text-forest-900">Official Kannur Presence</span>
               </div>
             </div>
-
-            {/* Office Consultations Note */}
-            <div className="p-5 rounded-xl bg-white border border-gold-600/20 text-xs text-charcoal-600 space-y-1.5 shadow-sm">
-              <p className="font-semibold text-forest-900">Office Consultations:</p>
-              <p className="leading-relaxed">
-                Visits to our office at Kamath Building, SN Park, Kannur are welcomed. Prior appointment via phone, WhatsApp, or Gmail is recommended to ensure undivided consultation time.
-              </p>
-            </div>
           </div>
 
           {/* Right Column: Premium Contact Form */}
