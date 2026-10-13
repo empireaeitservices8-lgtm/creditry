@@ -48,9 +48,14 @@ export default function Hero() {
             </h1>
 
             {/* Comprehensive Company Overview Copy */}
-            <p className="text-left sm:text-justify text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal max-w-2xl">
-              Simplifying loans insurance and Investments...One-Stop Solution for All Your Financial Needs. Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading banks and Non-Banking Financial Companies (NBFCs). Built on extensive industry experience, strong institutional relationships, and a customer-first approach. Credtree brings a wide spectrum of financial products and services together under one roof. Our objective is to simplify the financial journey of individuals, professionals, entrepreneurs, and businesses by connecting them with suitable financial solutions based on their specific requirements. From loans and insurance to credit cards, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
-            </p>
+            <div className="space-y-3 max-w-2xl text-justify">
+              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left]">
+                Simplifying loans insurance and Investments...One-Stop Solution for All Your Financial Needs. Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading banks and Non-Banking Financial Companies (NBFCs). Built on extensive industry experience, strong institutional relationships, and a customer-first approach, Credtree brings a wide spectrum of financial products and services together under one roof.
+              </p>
+              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left]">
+                Our objective is to simplify the financial journey of individuals, professionals, entrepreneurs, and businesses by connecting them with suitable financial solutions based on their specific requirements. From loans and insurance to credit cards, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
+              </p>
+            </div>
 
             {/* Pillar Badges */}
             <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2 max-w-xl">

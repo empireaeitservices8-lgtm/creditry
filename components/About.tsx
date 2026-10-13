@@ -156,7 +156,7 @@ export default function About() {
               <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-gold-400/60" />
             </div>
 
-            <p className="![text-align-last:left] text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto text-center ![text-align:center] ![text-align-last:center]">
               Credtree eliminates the complexity of approaching multiple institutions for different financial requirements. Through our multi-institutional network and comprehensive product portfolio, customers can explore suitable options through a single point of contact.
             </p>
           </div>
