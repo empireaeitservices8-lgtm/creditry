@@ -54,7 +54,7 @@ export default function Hero() {
               </p>
 
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify">
-                Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading Banks, Non-Banking Financial Companies (NBFCs) and Reputed Insurance Companies.
+                Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading Banks, Non-Banking Financial Companies (NBFCs) and reputed Insurance Companies.
               </p>
 
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify [text-wrap:pretty]">
