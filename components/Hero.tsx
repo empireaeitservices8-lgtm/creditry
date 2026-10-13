@@ -48,21 +48,21 @@ export default function Hero() {
             </h1>
 
             {/* Comprehensive Company Overview Copy */}
-            <div className="space-y-3.5 max-w-2xl text-justify">
-              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-left ![text-align:left]">
-                Simplifying loans insurance and Investments...One-Stop Solution for All Your Financial Needs
+            <div className="space-y-4 max-w-2xl text-justify">
+              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify">
+                Simplifying Loans Insurance and Investments...One Stop Solution for All Your Financial Needs.
               </p>
 
-              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left]">
-                Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading insurance companies,banks and Non-Banking Financial Companies (NBFCs).
+              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify">
+                Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading Banks, Non-Banking Financial Companies (NBFCs) and Reputed Insurance Companies.
               </p>
 
-              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left] [text-wrap:pretty]">
-                Built on extensive industry experience, strong institutional relationships, and a customer-first approach. Credtree brings a wide spectrum of financial products and services together under one roof. Our objective is to simplify the financial journey of in&shy;di&shy;vid&shy;u&shy;als, pro&shy;fes&shy;sion&shy;als, entre&shy;preneurs, and businesses by connecting them with suitable financial solutions based on their specific requirements.
+              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify [text-wrap:pretty]">
+                Built on extensive industry experience, strong institutional relationships, and a customer-first approach. Credtree brings a wide spectrum of financial products and services together under one roof. Our objective is to simplify the financial journey of individuals, professionals, entrepreneurs, and businesses by connecting them with suitable financial solutions based on their specific requirements.
               </p>
 
-              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left]">
-                From loans to credit cards,insurance, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
+              <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify">
+                From loans to credit cards, insurance, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
               </p>
             </div>
 

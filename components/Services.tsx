@@ -58,7 +58,7 @@ export default function Services() {
           </div>
 
           <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed font-normal max-w-3xl mx-auto">
-            Quick and easy solutions for loans, insurance, investment and credit cards of multiple banks and NBFC&apos;s. One stop solutions for all your financial needs.
+            Quick and easy solutions for loans, insurance, investment and credit cards of multiple Banks and NBFC&apos;s. One stop solutions for all your financial needs.
           </p>
         </div>
 

@@ -38,7 +38,7 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed text-left sm:text-justify">
+              <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed text-justify">
                 To emerge as a trusted and preferred financial solutions partner, recognized for professional excellence, transparency, accessibility, and customer-centric service.
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed text-left sm:text-justify">
+              <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed text-justify">
                 Our mission is to make financial services simpler, smarter, and more accessible by offering customers a comprehensive range of solutions through a single trusted platform
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function About() {
               <div className="mt-4 w-14 h-[2px] bg-gold-500/70 group-hover:w-24 transition-all duration-500" />
             </div>
 
-            <p className="relative mt-6 text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
+            <p className="relative mt-6 text-sm sm:text-base md:text-lg text-white/90 leading-relaxed text-justify">
               Our extensive institutional network enables us to provide customers with access to a broad range of products.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function About() {
               </h2>
             </div>
 
-            <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed text-left sm:text-justify">
+            <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed text-justify">
               We believe that every customer has a unique financial requirement. Our approach is therefore focused on understanding individual needs and facilitating appropriate solutions rather than offering a one-size-fits-all product.
             </p>
 

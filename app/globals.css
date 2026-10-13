@@ -148,11 +148,63 @@
 }
 
 /* =======================================================
-   MOBILE TEXT JUSTIFICATION (all pages, < 640px)
-   - Paragraphs, list items & descriptive text are justified.
-   - Inside centered blocks, the last/single line stays centered
-     so short labels and headings-style copy keep their look.
+   UNIVERSAL TEXT JUSTIFICATION (Desktop & Mobile)
+   - Paragraphs, list items, quotes, and descriptions are
+     properly justified across desktop and mobile screens.
+   - Natural word spacing with inter-word distribution.
+   - The final line stays aligned left naturally.
    ======================================================= */
+p,
+li,
+blockquote,
+dd,
+figcaption,
+address {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Explicit text-justify utility classes */
+.text-justify,
+p.text-justify,
+.text-justify p,
+[class*="text-justify"],
+[class*="![text-align:justify]"] {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  text-align-last: left !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Center-aligned elements preserve intentional centering */
+.text-center,
+.text-center p,
+.text-center li,
+.text-center blockquote,
+.text-center dd,
+p.text-center,
+li.text-center,
+[class*="![text-align:center]"] {
+  text-align: center;
+  text-align-last: center;
+}
+
+/* Justified blocks inside centered sections maintain justification */
+.text-center .text-justify,
+.text-center p.text-justify,
+.text-center [class*="text-justify"] {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  text-align-last: left !important;
+}
+
+/* Mobile specific overrides and sizing */
 @media (max-width: 639px) {
   p,
   li,
@@ -162,50 +214,46 @@
   address {
     text-align: justify;
     text-justify: inter-word;
-    hyphens: manual;
-    -webkit-hyphens: manual;
+    text-align-last: left;
     word-break: normal;
     overflow-wrap: break-word;
   }
 
-  /* Allow direct text-left on paragraph/list to naturally left align */
-  p.text-left,
-  li.text-left,
-  [class*="![text-align:left]"] {
-    text-align: left !important;
-    text-align-last: left !important;
-  }
-
-  /* Specific text-justify classes must always justify without excessive word gaps */
   .text-justify,
   p.text-justify,
   .text-justify p,
-  [class*="text-justify"],
-  [class*="![text-align:justify]"] {
+  [class*="text-justify"] {
     text-align: justify !important;
-    text-justify: auto !important;
+    text-justify: inter-word !important;
     text-align-last: left !important;
-    text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
   }
 
+  /* Centered elements on mobile */
+  .text-center,
   .text-center p,
   .text-center li,
   .text-center blockquote,
   .text-center dd,
   p.text-center,
   li.text-center {
+    text-align: center;
     text-align-last: center;
   }
 
-  /* -------- Mobile readability: larger minimum font sizes -------- */
-  /* Body copy & list text (was 12px / 14px) -> 16px */
+  .text-center .text-justify,
+  .text-center p.text-justify {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    text-align-last: left !important;
+  }
+
+  /* -------- Mobile readability: natural font sizes & balanced line spacing -------- */
+  /* Body copy & list text */
   p.text-xs, li.text-xs, p.text-sm, li.text-sm,
   .text-xs > p, .text-xs > li, .text-sm > p, .text-sm > li,
   .text-xs > ul > li, .text-sm > ul > li {
-    font-size: 1rem !important; /* 16px */
-    line-height: 1.7 !important;
+    font-size: 0.9375rem !important; /* 15px */
+    line-height: 1.55 !important;
   }
 
   /* Small card titles (was 12px / 14px) */

@@ -17,7 +17,7 @@ const WHY_CREDTREE_SIX_POINTS = [
   },
   {
     title: "Choice.",
-    description: "Access to diverse products and solutions through multiple banks and NBFCs.",
+    description: "Access to diverse products and solutions through multiple Banks and NBFCs.",
     icon: Landmark,
   },
   {
@@ -77,8 +77,8 @@ export default function HowWeHelp() {
               </div>
 
               {/* Exact content paragraphs */}
-              <div className="max-w-3xl mx-auto text-charcoal-700 text-sm sm:text-base leading-relaxed font-normal text-left sm:text-justify italic">
-                <p className="![text-align-last:left]">
+              <div className="max-w-3xl mx-auto text-charcoal-700 text-sm sm:text-base leading-relaxed font-normal text-justify italic">
+                <p className="text-justify ![text-align-last:left]">
                   At Credtree Financial Services, we are committed to building lasting relationships through trust, transparency, professional service, and responsible financial facilitation. We continuously strive to stay aligned with the changing financial environment and evolving customer expectations, enabling our clients to make informed financial decisions with greater confidence and convenience.
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default function HowWeHelp() {
                     </h4>
 
                     {/* Description */}
-                    <p className="text-base sm:text-base md:text-lg text-charcoal-700 leading-relaxed font-normal text-left ![text-align:left]">
+                    <p className="text-base sm:text-base md:text-lg text-charcoal-700 leading-relaxed font-normal text-justify">
                       {item.description}
                     </p>
                   </div>

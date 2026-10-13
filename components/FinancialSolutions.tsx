@@ -79,7 +79,7 @@ export default function FinancialSolutions() {
                           {item.title}
                         </h3>
 
-                        <p className="mt-2 text-sm sm:text-base text-white/90 leading-relaxed font-normal max-w-2xl">
+                        <p className="mt-2 text-sm sm:text-base text-white/90 leading-relaxed font-normal max-w-2xl text-justify">
                           {item.detail}
                         </p>
                       </div>
@@ -126,7 +126,7 @@ export default function FinancialSolutions() {
                   <div className="w-10 h-[1.5px] bg-gold-700/40 my-3" />
 
                   {/* Detail */}
-                  <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed font-normal text-justify">
                     {item.detail}
                   </p>
                 </div>
@@ -145,11 +145,11 @@ export default function FinancialSolutions() {
         </div>
 
         {/* Informative Guidance Footer */}
-        <div className="mt-10 sm:mt-14 p-5 sm:p-7 rounded-2xl bg-white border border-beige shadow-card-luxury text-center sm:text-left max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-4">
+        <div className="mt-10 sm:mt-14 p-5 sm:p-7 rounded-2xl bg-white border border-beige shadow-card-luxury text-justify max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-[#FAF7F0] border border-beige flex items-center justify-center text-forest-800 shrink-0">
             <Sparkles className="w-6 h-6 text-gold-700" />
           </div>
-          <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed">
+          <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed text-justify">
             <span className="font-semibold text-forest-800">Personalized Solution Mapping: </span>
             Our Business Associate works closely with you to examine requirements across this full range of financial solutions, ensuring you receive clear guidance on institutional processes and documentation.
           </p>

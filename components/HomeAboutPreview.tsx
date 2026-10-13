@@ -64,7 +64,7 @@ export default function HomeAboutPreview() {
                   <div className="w-10 h-[2px] bg-gradient-to-r from-gold-700 to-transparent mb-4 group-hover:w-20 transition-all duration-500" />
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify">
                     {card.description}
                   </p>
                 </div>
