@@ -147,6 +147,37 @@
   animation: heroArrowDraw 1.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards;
 }
 
+/* =======================================================
+   MOBILE TEXT JUSTIFICATION (all pages, < 640px)
+   - Paragraphs, list items & descriptive text are justified.
+   - Inside centered blocks, the last/single line stays centered
+     so short labels and headings-style copy keep their look.
+   ======================================================= */
+@media (max-width: 639px) {
+  p,
+  li,
+  blockquote,
+  dd,
+  figcaption,
+  address {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .text-center p,
+  .text-center li,
+  .text-center blockquote,
+  .text-center dd,
+  p.text-center,
+  li.text-center {
+    text-align-last: center;
+  }
+}
+
 /* Accessibility: Respect Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
   *,

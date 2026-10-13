@@ -47,11 +47,18 @@ export default function HomeServicesPreview() {
 
         {/* Minimal Cards Grid: Only Image & Name */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-6 mt-8 sm:mt-10">
-          {PREVIEW_SERVICES.map((srv) => (
+          {PREVIEW_SERVICES.map((srv, idx) => {
+            const isLastOdd =
+              idx === PREVIEW_SERVICES.length - 1 && PREVIEW_SERVICES.length % 2 === 1;
+            return (
             <Link
               key={srv.id}
               href="/services"
-              className="group p-3.5 sm:p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-beige shadow-card-luxury hover:border-gold-700/60 hover:shadow-card-hover transition-all duration-300 flex flex-col items-center text-center"
+              className={`group p-3.5 sm:p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-beige shadow-card-luxury hover:border-gold-700/60 hover:shadow-card-hover transition-all duration-300 flex flex-col items-center text-center ${
+                isLastOdd
+                  ? "col-span-2 sm:col-span-1 justify-self-center sm:justify-self-auto w-[calc(50%-0.4375rem)] sm:w-auto"
+                  : ""
+              }`}
             >
               {/* Image Container */}
               <div className="w-full h-28 sm:h-36 rounded-xl bg-[#FAF7F0] border border-beige p-2 sm:p-2.5 flex items-center justify-center overflow-hidden mb-3 sm:mb-4 group-hover:border-gold-700/60 transition-colors">
@@ -67,7 +74,8 @@ export default function HomeServicesPreview() {
                 {srv.title}
               </h3>
             </Link>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Button Under These Cards */}

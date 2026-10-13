@@ -77,12 +77,9 @@ export default function HowWeHelp() {
               </div>
 
               {/* Exact content paragraphs */}
-              <div className="max-w-3xl mx-auto space-y-4 text-charcoal-700 text-sm sm:text-base leading-relaxed font-normal text-left sm:text-justify italic">
-                <p>
-                  At Credtree Financial Services, we are committed to building lasting relationships through trust, transparency, professional service, and responsible financial facilitation.
-                </p>
-                <p>
-                  We continuously strive to stay aligned with the changing financial environment and evolving customer expectations, enabling our clients to make informed financial decisions with greater confidence and convenience.
+              <div className="max-w-3xl mx-auto text-charcoal-700 text-sm sm:text-base leading-relaxed font-normal text-left sm:text-justify italic">
+                <p className="![text-align-last:left]">
+                  At Credtree Financial Services, we are committed to building lasting relationships through trust, transparency, professional service, and responsible financial facilitation. We continuously strive to stay aligned with the changing financial environment and evolving customer expectations, enabling our clients to make informed financial decisions with greater confidence and convenience.
                 </p>
               </div>
             </div>

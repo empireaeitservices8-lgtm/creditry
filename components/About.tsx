@@ -112,7 +112,7 @@ export default function About() {
               We believe that every customer has a unique financial requirement. Our approach is therefore focused on understanding individual needs and facilitating appropriate solutions rather than offering a one-size-fits-all product.
             </p>
 
-            <div className="mt-6 pt-5 border-t border-beige flex flex-wrap gap-2 sm:gap-2.5">
+            <div className="mt-6 pt-5 border-t border-beige flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-2.5">
               {["Individual Needs", "Appropriate Solutions", "Personal Guidance"].map((t) => (
                 <span
                   key={t}
@@ -156,7 +156,7 @@ export default function About() {
               <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-gold-400/60" />
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+            <p className="![text-align-last:left] text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
               Credtree eliminates the complexity of approaching multiple institutions for different financial requirements. Through our multi-institutional network and comprehensive product portfolio, customers can explore suitable options through a single point of contact.
             </p>
           </div>
