@@ -85,13 +85,13 @@ export default function About() {
               </div>
 
               <div className="font-serif font-black leading-none bg-gradient-to-b from-gold-300 via-gold-500 to-gold-800 bg-clip-text text-transparent text-5xl sm:text-6xl md:text-7xl">
-                20+ Year
+                20+ Years
               </div>
               <div className="mt-4 w-14 h-[2px] bg-gold-500/70 group-hover:w-24 transition-all duration-500" />
             </div>
 
             <p className="relative mt-6 text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
-              Our extensive institutional network enables us to provide customers with access to a broad range
+              Our extensive institutional network enables us to provide customers with access to a broad range of products.
             </p>
           </div>
 

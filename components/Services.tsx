@@ -131,7 +131,7 @@ export default function Services() {
                 </h4>
                 <div className="w-16 h-[1.5px] bg-gold-700/50 mb-3.5" />
                 <p className="text-sm sm:text-base md:text-lg text-charcoal-700 leading-relaxed font-normal mb-6 sm:mb-8">
-                  We bring multiple financial requirements together under one roof, including:
+                  We bring multiple financial solutions together under one roof, including:
                 </p>
 
                 {/* 9 Requirements Grid */}

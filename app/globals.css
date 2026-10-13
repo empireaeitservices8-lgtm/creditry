@@ -162,8 +162,8 @@
   address {
     text-align: justify !important;
     text-justify: inter-word;
-    hyphens: auto;
-    -webkit-hyphens: auto;
+    hyphens: manual;
+    -webkit-hyphens: manual;
     word-break: normal;
     overflow-wrap: break-word;
   }
@@ -175,6 +175,36 @@
   p.text-center,
   li.text-center {
     text-align-last: center;
+  }
+
+  /* -------- Mobile readability: larger minimum font sizes -------- */
+  /* Body copy & list text (was 12px / 14px) -> 15px */
+  p.text-xs, li.text-xs, p.text-sm, li.text-sm,
+  .text-xs > p, .text-xs > li, .text-sm > p, .text-sm > li,
+  .text-xs > ul > li, .text-sm > ul > li {
+    font-size: 0.9375rem !important; /* 15px */
+    line-height: 1.65 !important;
+  }
+
+  /* Small card titles (was 12px / 14px) */
+  h3.text-xs, h4.text-xs, h5.text-xs {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.35 !important;
+  }
+  h3.text-sm, h4.text-sm, h5.text-sm {
+    font-size: 1rem !important; /* 16px */
+    line-height: 1.35 !important;
+  }
+
+  /* Form fields, links & buttons (was 12px) */
+  a.text-xs, button.text-xs, label.text-xs,
+  input.text-xs, select.text-xs, textarea.text-xs {
+    font-size: 0.8125rem !important; /* 13px */
+  }
+
+  /* Tiny labels / badges (was 10px / 11px) */
+  .text-\[10px\], .text-\[11px\] {
+    font-size: 0.75rem !important; /* 12px */
   }
 }
 
