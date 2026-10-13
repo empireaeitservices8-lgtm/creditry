@@ -168,15 +168,26 @@
     overflow-wrap: break-word;
   }
 
-  /* Allow text-left classes to naturally left align without stretching word spaces */
+  /* Allow direct text-left on paragraph/list to naturally left align */
   p.text-left,
   li.text-left,
-  .text-left p,
-  .text-left li,
-  [class*="text-left"],
   [class*="![text-align:left]"] {
     text-align: left !important;
     text-align-last: left !important;
+  }
+
+  /* Specific text-justify classes must always justify without excessive word gaps */
+  .text-justify,
+  p.text-justify,
+  .text-justify p,
+  [class*="text-justify"],
+  [class*="![text-align:justify]"] {
+    text-align: justify !important;
+    text-justify: auto !important;
+    text-align-last: left !important;
+    text-wrap: pretty;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
   .text-center p,
