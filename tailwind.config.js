@@ -9,29 +9,48 @@ module.exports = {
     extend: {
       colors: {
         forest: {
-          900: "#002D22", // Dark Green
-          800: "#003F2D", // Primary Forest Green
-          700: "#075B42", // Secondary Green
-          600: "#0D6E51",
-          500: "#138563",
-          100: "#E3ECE8",
+          950: "#03231B",
+          900: "#043327",
+          850: "#053B2D",
+          800: "#064333", // Primary Deep Green for Headings & Primary Buttons
+          700: "#0B5341",
+          600: "#106A53",
+          500: "#178367",
+          100: "#E2ECE7",
           50: "#F0F5F2",
+          DEFAULT: "#064333",
         },
         gold: {
-          900: "#8F5E00",
-          800: "#B87900", // Dark Gold
-          700: "#C88A00", // Base Gold
-          600: "#D9A62A", // Light Gold
-          500: "#E5B83E",
-          400: "#F2C14E", // Highlight Gold
-          300: "#F8D67F",
-          100: "#FCF3D9",
-          50: "#FEFBF0",
+          900: "#8B6A1A",
+          800: "#AA821E",
+          700: "#C89B2C", // Premium Gold Accent
+          600: "#D6AB3B",
+          500: "#E2BC55",
+          400: "#ECCF76",
+          300: "#F5DF9E",
+          100: "#FAF2DB",
+          50: "#FCF8EC",
+          DEFAULT: "#C89B2C",
+        },
+        cream: {
+          DEFAULT: "#FAF7F0", // Warm cream main background
+          50: "#FFFFFF",
+          100: "#FAF7F0",
+          200: "#F5EFE3",
+        },
+        beige: {
+          DEFAULT: "#E9E1D0", // Subtle warm beige borders and dividers
+          border: "#E9E1D0",
+          divider: "#E9E1D0",
+          50: "#F7F3EB",
+          100: "#EFE8DA",
+          200: "#E9E1D0",
+          300: "#DDD2BD",
         },
         ivory: {
-          DEFAULT: "#FBF7F0", // Warm Ivory
-          light: "#FFFDF9",   // Light Background
-          dark: "#F4EDE0",
+          DEFAULT: "#FAF7F0", // Warm Cream
+          light: "#FAF7F0",   // Warm Cream
+          dark: "#F4ECE0",
         },
         charcoal: {
           900: "#17201C", // Dark Text
@@ -48,14 +67,14 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gold-gradient": "linear-gradient(135deg, #C88A00 0%, #F2C14E 50%, #B87900 100%)",
-        "forest-gradient": "linear-gradient(180deg, #003F2D 0%, #002D22 100%)",
+        "gold-gradient": "linear-gradient(135deg, #C89B2C 0%, #ECCF76 50%, #AA821E 100%)",
+        "forest-gradient": "linear-gradient(180deg, #064333 0%, #043327 100%)",
       },
       boxShadow: {
-        "gold-subtle": "0 4px 20px -2px rgba(200, 138, 0, 0.15)",
-        "gold-hover": "0 10px 30px -4px rgba(200, 138, 0, 0.25)",
-        "card-luxury": "0 12px 36px -8px rgba(0, 45, 34, 0.08)",
-        "card-hover": "0 20px 40px -10px rgba(0, 45, 34, 0.14)",
+        "gold-subtle": "0 4px 20px -2px rgba(200, 155, 44, 0.15)",
+        "gold-hover": "0 10px 30px -4px rgba(200, 155, 44, 0.25)",
+        "card-luxury": "0 10px 30px -8px rgba(6, 67, 51, 0.05), 0 2px 8px -2px rgba(6, 67, 51, 0.03)",
+        "card-hover": "0 18px 36px -10px rgba(6, 67, 51, 0.10), 0 4px 12px -2px rgba(6, 67, 51, 0.05)",
       }
     },
   },

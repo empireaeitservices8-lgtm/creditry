@@ -32,12 +32,12 @@ export default function CredtreeBrandText({
       credTreeGap: "",
     },
     lg: {
-      title: "text-3xl sm:text-4xl md:text-5xl lg:text-[52px] tracking-[0.14em]",
-      spacing: "gap-2.5 sm:gap-3.5",
-      subtitle: "text-[10px] sm:text-xs md:text-[13px] tracking-[0.28em]",
+      title: "text-2xl sm:text-4xl md:text-5xl lg:text-[52px] tracking-[0.08em] sm:tracking-[0.14em]",
+      spacing: "gap-2 sm:gap-3.5",
+      subtitle: "text-[9px] sm:text-xs md:text-[13px] tracking-[0.16em] sm:tracking-[0.28em]",
       diamond: "w-2 h-2 sm:w-2.5 sm:h-2.5",
       diamondRow: "w-[54%] mt-1 sm:mt-1.5",
-      row2Margin: "mt-2 sm:mt-2.5",
+      row2Margin: "mt-1.5 sm:mt-2.5",
       credTreeGap: "",
     },
     xl: {

@@ -54,7 +54,7 @@ export default function Logo({
     lg: "h-20 sm:h-24 lg:h-28",
     xl: "h-24 sm:h-32",
     "2xl": "h-28 sm:h-36 lg:h-40",
-    header: "h-20 sm:h-28 lg:h-32",
+    header: "h-12 sm:h-14 lg:h-16",
   }[size];
 
   // Circular mark sizing for the badge

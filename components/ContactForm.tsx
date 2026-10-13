@@ -153,18 +153,18 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="p-8 sm:p-10 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury text-center space-y-6">
+      <div className="p-8 sm:p-10 rounded-2xl bg-white border border-beige shadow-card-luxury text-center space-y-6">
         <div className="w-16 h-16 rounded-full bg-forest-50 border border-forest-100 text-forest-800 flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-8 h-8 text-forest-800" />
         </div>
 
         <div className="space-y-2">
-          <h3 className="font-serif text-2xl font-bold text-forest-900">
+          <h3 className="font-serif text-2xl font-bold text-forest-800">
             Enquiry Prepared Successfully
           </h3>
           <p className="text-sm text-charcoal-700 leading-relaxed max-w-md mx-auto">
-            Thank you, <strong className="text-forest-900">{formData.name}</strong>. Your enquiry regarding{" "}
-            <strong className="text-forest-900">{formData.service}</strong> is ready to send to{" "}
+            Thank you, <strong className="text-forest-800">{formData.name}</strong>. Your enquiry regarding{" "}
+            <strong className="text-forest-800">{formData.service}</strong> is ready to send to{" "}
             the <strong>Credtree Financial Services</strong> team.
           </p>
         </div>
@@ -200,17 +200,17 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="p-8 sm:p-10 rounded-2xl bg-white border border-gold-600/30 shadow-card-luxury space-y-5"
+      className="p-5 sm:p-8 sm:p-10 rounded-2xl bg-white border border-beige shadow-card-luxury space-y-5"
     >
-      <div className="border-b border-gold-600/20 pb-4">
-        <h3 className="font-serif text-2xl font-bold text-forest-900">
+      <div className="border-b border-beige pb-4">
+        <h3 className="font-serif text-2xl font-bold text-forest-800">
           Send a Financial Service Enquiry
         </h3>
       </div>
 
       {/* Name Field */}
       <div>
-        <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+        <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-forest-800 mb-1.5">
           Full Name <span className="text-red-600">*</span>
         </label>
         <input
@@ -223,7 +223,7 @@ export default function ContactForm() {
           className={`w-full px-4 py-3 rounded-lg border text-sm transition-colors focus:outline-none ${
             errors.name
               ? "border-red-400 bg-red-50/30 focus:border-red-500"
-              : "border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white"
+              : "border-beige bg-[#FAF7F0] focus:border-forest-800 focus:bg-white text-charcoal-900"
           }`}
         />
         {errors.name && <p className="text-xs text-red-600 mt-1">{errors.name}</p>}
@@ -232,7 +232,7 @@ export default function ContactForm() {
       {/* Contact Grid: Phone and Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+          <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-forest-800 mb-1.5">
             Phone Number <span className="text-red-600">*</span>
           </label>
           <input
@@ -248,14 +248,14 @@ export default function ContactForm() {
             className={`w-full px-4 py-3 rounded-lg border text-sm transition-colors focus:outline-none ${
               errors.phone
                 ? "border-red-400 bg-red-50/30 focus:border-red-500"
-                : "border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white"
+                : "border-beige bg-[#FAF7F0] focus:border-forest-800 focus:bg-white text-charcoal-900"
             }`}
           />
           {errors.phone && <p className="text-xs text-red-600 mt-1">{errors.phone}</p>}
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+          <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-forest-800 mb-1.5">
             Email Address <span className="text-red-600">*</span>
           </label>
           <input
@@ -268,7 +268,7 @@ export default function ContactForm() {
             className={`w-full px-4 py-3 rounded-lg border text-sm lowercase transition-colors focus:outline-none ${
               errors.email
                 ? "border-red-400 bg-red-50/30 focus:border-red-500"
-                : "border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white"
+                : "border-beige bg-[#FAF7F0] focus:border-forest-800 focus:bg-white text-charcoal-900"
             }`}
           />
           {errors.email && <p className="text-xs text-red-600 mt-1">{errors.email}</p>}
@@ -277,7 +277,7 @@ export default function ContactForm() {
 
       {/* Service Dropdown */}
       <div>
-        <label htmlFor="service" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+        <label htmlFor="service" className="block text-xs font-semibold uppercase tracking-wider text-forest-800 mb-1.5">
           Service Required <span className="text-red-600">*</span>
         </label>
         <select
@@ -285,10 +285,10 @@ export default function ContactForm() {
           name="service"
           value={formData.service}
           onChange={handleChange}
-          className={`w-full px-4 py-3 rounded-lg border text-sm transition-colors focus:outline-none appearance-none bg-white ${
+          className={`w-full px-4 py-3 rounded-lg border text-sm transition-colors focus:outline-none appearance-none bg-[#FAF7F0] text-charcoal-900 ${
             errors.service
               ? "border-red-400 bg-red-50/30 focus:border-red-500"
-              : "border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white"
+              : "border-beige focus:border-forest-800 focus:bg-white"
           }`}
         >
           <option value="">-- Please select a service category --</option>
@@ -303,7 +303,7 @@ export default function ContactForm() {
 
       {/* Message Field */}
       <div>
-        <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-forest-900 mb-1.5">
+        <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-forest-800 mb-1.5">
           Message / Requirement Details
         </label>
         <textarea
@@ -313,7 +313,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Briefly describe your requirements, timeframes, or specific inquiries..."
-          className="w-full px-4 py-3 rounded-lg border border-gold-600/30 bg-ivory/40 focus:border-forest-800 focus:bg-white text-sm transition-colors focus:outline-none resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-beige bg-[#FAF7F0] focus:border-forest-800 focus:bg-white text-sm transition-colors focus:outline-none resize-none text-charcoal-900"
         />
       </div>
 
@@ -321,7 +321,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-4 px-6 rounded-xl bg-forest-800 text-ivory text-sm font-semibold tracking-wide uppercase shadow-card-luxury hover:bg-forest-900 border border-gold-500/40 transition-all duration-200 flex items-center justify-center gap-2 group active:scale-[0.99] disabled:opacity-75"
+        className="w-full py-4 px-6 rounded-xl bg-forest-800 text-white text-sm font-semibold tracking-wide uppercase shadow-card-luxury hover:bg-forest-900 hover:border-gold-700 border border-gold-700/40 transition-all duration-200 flex items-center justify-center gap-2 group active:scale-[0.99] disabled:opacity-75"
       >
         <Send className="w-4 h-4 text-gold-400 transition-transform group-hover:translate-x-1" />
         <span>{isSubmitting ? "Processing Enquiry..." : "Send Enquiry"}</span>

@@ -27,8 +27,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-ivory/95 backdrop-blur-md shadow-card-luxury border-b border-gold-600/30 py-1.5 sm:py-2"
-            : "bg-ivory/90 backdrop-blur-sm shadow-sm border-b border-gold-700/15 py-2 sm:py-2.5"
+            ? "bg-[#FAF7F0]/95 backdrop-blur-md shadow-sm border-b border-beige py-1.5 sm:py-2"
+            : "bg-[#FAF7F0]/90 backdrop-blur-sm border-b border-beige py-2 sm:py-2.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,13 +47,13 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={`px-3.5 py-2 text-sm sm:text-[15px] font-bold tracking-wide transition-colors duration-200 rounded-md relative group ${
-                      isActive ? "text-gold-700 font-extrabold" : "text-forest-800 hover:text-forest-600"
+                      isActive ? "text-gold-700 font-extrabold" : "text-forest-800 hover:text-gold-700"
                     }`}
                   >
                     <span>{link.label}</span>
-                    {/* Active or hover indicator line */}
+                    {/* Active or hover indicator line in Gold */}
                     <span
-                      className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gradient-to-r from-forest-800 via-forest-600 to-gold-500 transition-transform duration-200 origin-left ${
+                      className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gold-700 transition-transform duration-200 origin-left ${
                         isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       }`}
                     />
@@ -67,7 +67,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-md text-forest-900 hover:text-forest-700 hover:bg-forest-50 transition-colors focus:outline-none"
+                className="p-2.5 rounded-md text-forest-800 hover:text-gold-700 hover:bg-forest-50 transition-colors focus:outline-none"
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle navigation menu"
               >
@@ -85,16 +85,16 @@ export default function Navbar() {
           onClick={closeMobileMenu}
         >
           <div
-            className="fixed top-0 right-0 bottom-0 w-full max-w-xs bg-ivory shadow-2xl p-6 flex flex-col justify-between overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 w-full max-w-xs bg-[#FAF7F0] shadow-2xl p-6 flex flex-col justify-between overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div>
-              <div className="flex items-center justify-between pb-4 border-b border-gold-600/20">
+              <div className="flex items-center justify-between pb-4 border-b border-beige">
                 <Logo size="sm" variant="compact" />
                 <button
                   type="button"
                   onClick={closeMobileMenu}
-                  className="p-2 rounded-full text-forest-900 hover:bg-forest-50"
+                  className="p-2 rounded-full text-forest-800 hover:bg-forest-50"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -103,22 +103,29 @@ export default function Navbar() {
 
               {/* Mobile Nav Links */}
               <nav className="mt-6 flex flex-col space-y-1">
-                {NAV_LINKS.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={closeMobileMenu}
-                    className="flex items-center justify-between px-3 py-3 text-base font-medium text-forest-900 rounded-md hover:bg-forest-50 hover:text-gold-700 transition-colors"
-                  >
-                    <span>{link.label}</span>
-                    <span className="w-1.5 h-1.5 rotate-45 bg-gold-600/60" />
-                  </Link>
-                ))}
+                {NAV_LINKS.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMobileMenu}
+                      className={`flex items-center justify-between px-3 py-3 text-base font-semibold rounded-md transition-colors ${
+                        isActive
+                          ? "text-gold-700 bg-white border border-beige"
+                          : "text-forest-800 hover:bg-white hover:text-gold-700"
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <span className={`w-1.5 h-1.5 rotate-45 ${isActive ? "bg-gold-700" : "bg-beige"}`} />
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
 
             {/* Mobile Footer Note */}
-            <div className="pt-6 border-t border-gold-600/20 text-center">
+            <div className="pt-6 border-t border-beige text-center">
               <p className="text-[11px] text-charcoal-500">
                 {CONTACT_INFO.address.line1}, {CONTACT_INFO.address.line2}
               </p>

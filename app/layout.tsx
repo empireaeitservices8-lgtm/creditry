@@ -3,6 +3,7 @@ import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import { COMPANY_NAME, TAGLINE, CONTACT_INFO, CONTACT_PERSON } from "@/lib/constants";
 
 const playfair = Playfair_Display({
@@ -107,13 +108,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased selection:bg-gold-500 selection:text-white flex flex-col justify-between">
+      <body className="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased selection:bg-gold-700 selection:text-white flex flex-col justify-between">
         {/* Fixed Header on all pages */}
         <Navbar />
-        <main className="flex-1 pt-[72px] sm:pt-[80px]">
+        <main className="flex-1 pt-[68px] sm:pt-[76px] lg:pt-[84px]">
           {children}
         </main>
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HeroVisual() {
   return (
-    <div className="relative w-full max-w-[460px] sm:max-w-[480px] aspect-square mx-auto flex items-center justify-center p-4">
+    <div className="relative w-full max-w-[300px] xs:max-w-[360px] sm:max-w-[440px] lg:max-w-[480px] aspect-square mx-auto flex items-center justify-center p-3 sm:p-4">
       {/* Ambient background glow */}
       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold-400/25 via-forest-700/15 to-transparent blur-3xl -z-10" />
 

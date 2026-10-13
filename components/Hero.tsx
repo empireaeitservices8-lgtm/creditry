@@ -8,30 +8,30 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-ivory via-ivory-light to-ivory pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20"
+      className="relative overflow-hidden bg-gradient-to-b from-[#FAF7F0] via-white/50 to-[#FAF7F0] pt-6 sm:pt-12 lg:pt-16 pb-10 sm:pb-16"
     >
       {/* Background Architectural Grid & Subtle Radial Watermark */}
-      <div className="absolute inset-0 bg-[radial-gradient(#C88A00_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#C89B2C_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04] pointer-events-none" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-gold-400/10 via-forest-700/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-forest-800/5 via-gold-500/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
           {/* Left Column: Headlines & Editorial Copy */}
-          <div className="lg:col-span-7 text-left space-y-6 lg:pr-6">
+          <div className="lg:col-span-7 text-left space-y-5 lg:pr-6">
             {/* Brand Identity as Pure Crisp Typography */}
-            <div className="pt-1">
+            <div className="pt-0">
               <CredtreeBrandText size="lg" />
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-forest-900 tracking-tight leading-[1.15]">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-forest-800 tracking-tight leading-[1.15]">
               Where Credit Meets{" "}
               <span className="relative inline-block text-forest-800">
                 Growth &amp; Security
                 {/* Subtle gold artistic underline */}
                 <svg
-                  className="absolute left-0 -bottom-2 w-full h-3 text-gold-500"
+                  className="absolute left-0 -bottom-2 w-full h-3 text-gold-700"
                   viewBox="0 0 300 12"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,30 +47,24 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Supporting Headline */}
-            <p className="font-serif italic text-lg sm:text-xl lg:text-2xl text-gold-800 font-medium leading-snug">
-              Simplifying loans, insurance and investments.
-            </p>
-
-            {/* Additional Factual Narrative Copy */}
-            <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal max-w-2xl">
-              Helping individuals and businesses explore financial solutions with expertise,
-              flexible options and complete transparency.
+            {/* Comprehensive Company Overview Copy */}
+            <p className="text-left sm:text-justify text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal max-w-2xl">
+              Simplifying loans insurance and Investments...One-Stop Solution for All Your Financial Needs. Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading banks and Non-Banking Financial Companies (NBFCs). Built on extensive industry experience, strong institutional relationships, and a customer-first approach. Credtree brings a wide spectrum of financial products and services together under one roof. Our objective is to simplify the financial journey of individuals, professionals, entrepreneurs, and businesses by connecting them with suitable financial solutions based on their specific requirements. From loans and insurance to credit cards, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
             </p>
 
             {/* Pillar Badges */}
-            <div className="grid grid-cols-3 gap-3 pt-2 max-w-lg">
-              <div className="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                <span className="text-xs font-semibold text-forest-900">Expertise</span>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2 max-w-xl">
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-3 py-2.5 sm:py-3.5 px-2 sm:px-4 rounded-xl bg-white border border-beige shadow-card-luxury hover:border-gold-700/50 transition-all duration-300 group">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-forest-800 shrink-0 group-hover:text-gold-700 transition-colors" />
+                <span className="text-xs sm:text-base font-bold text-forest-800 tracking-tight sm:tracking-wide">Expertise</span>
               </div>
-              <div className="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                <span className="text-xs font-semibold text-forest-900">Flexible</span>
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-3 py-2.5 sm:py-3.5 px-2 sm:px-4 rounded-xl bg-white border border-beige shadow-card-luxury hover:border-gold-700/50 transition-all duration-300 group">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-forest-800 shrink-0 group-hover:text-gold-700 transition-colors" />
+                <span className="text-xs sm:text-base font-bold text-forest-800 tracking-tight sm:tracking-wide">Flexible</span>
               </div>
-              <div className="flex items-center gap-2 p-2 rounded-lg bg-forest-50/80 border border-forest-100">
-                <CheckCircle2 className="w-4 h-4 text-forest-700 shrink-0" />
-                <span className="text-xs font-semibold text-forest-900">Transparent</span>
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-3 py-2.5 sm:py-3.5 px-2 sm:px-4 rounded-xl bg-white border border-beige shadow-card-luxury hover:border-gold-700/50 transition-all duration-300 group">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-forest-800 shrink-0 group-hover:text-gold-700 transition-colors" />
+                <span className="text-xs sm:text-base font-bold text-forest-800 tracking-tight sm:tracking-wide">Transparent</span>
               </div>
             </div>
 
@@ -79,7 +73,7 @@ export default function Hero() {
               {/* Primary Action Button */}
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-forest-800 text-ivory text-base font-semibold tracking-wide shadow-card-luxury hover:bg-forest-900 hover:shadow-gold-hover border border-gold-600/40 transition-all duration-200 group active:scale-[0.99]"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-forest-800 text-white text-base font-semibold tracking-wide shadow-card-luxury hover:bg-forest-900 hover:border-gold-700 hover:shadow-gold-subtle border border-gold-700/40 transition-all duration-200 group active:scale-[0.99]"
               >
                 <span>Explore Our Services</span>
                 <ArrowRight className="w-4 h-4 text-gold-400 transition-transform duration-200 group-hover:translate-x-1" />

@@ -26,15 +26,15 @@ export default function GoldDivider({
         className={`h-[1px] flex-1 ${
           isDark
             ? "bg-gradient-to-r from-transparent via-gold-500/70 to-gold-400"
-            : "bg-gradient-to-r from-transparent via-gold-600/50 to-gold-700"
+            : "bg-gradient-to-r from-transparent via-beige to-gold-700"
         }`}
       />
-      <span className="w-1.5 h-1.5 rotate-45 bg-gold-500 shrink-0 shadow-sm" />
+      <span className="w-1.5 h-1.5 rotate-45 bg-gold-700 shrink-0 shadow-sm" />
       <span
         className={`h-[1px] flex-1 ${
           isDark
             ? "bg-gradient-to-l from-transparent via-gold-500/70 to-gold-400"
-            : "bg-gradient-to-l from-transparent via-gold-600/50 to-gold-700"
+            : "bg-gradient-to-l from-transparent via-beige to-gold-700"
         }`}
       />
     </div>
