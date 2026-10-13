@@ -128,12 +128,12 @@ export default function HowWeHelp() {
                     </div>
 
                     {/* Bold label as visual heading */}
-                    <h4 className="font-serif text-lg sm:text-xl sm:text-2xl font-bold text-forest-800 mb-2 sm:mb-2.5 group-hover:text-gold-700 transition-colors tracking-tight">
+                    <h4 className="font-serif text-xl sm:text-2xl font-bold text-forest-800 mb-2.5 sm:mb-3 group-hover:text-gold-700 transition-colors tracking-tight">
                       {item.title}
                     </h4>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed font-normal">
+                    <p className="text-base sm:text-base md:text-lg text-charcoal-700 leading-relaxed font-normal text-left ![text-align:left]">
                       {item.description}
                     </p>
                   </div>

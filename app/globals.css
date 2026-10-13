@@ -160,12 +160,23 @@
   dd,
   figcaption,
   address {
-    text-align: justify !important;
+    text-align: justify;
     text-justify: inter-word;
     hyphens: manual;
     -webkit-hyphens: manual;
     word-break: normal;
     overflow-wrap: break-word;
+  }
+
+  /* Allow text-left classes to naturally left align without stretching word spaces */
+  p.text-left,
+  li.text-left,
+  .text-left p,
+  .text-left li,
+  [class*="text-left"],
+  [class*="![text-align:left]"] {
+    text-align: left !important;
+    text-align-last: left !important;
   }
 
   .text-center p,
@@ -178,33 +189,33 @@
   }
 
   /* -------- Mobile readability: larger minimum font sizes -------- */
-  /* Body copy & list text (was 12px / 14px) -> 15px */
+  /* Body copy & list text (was 12px / 14px) -> 16px */
   p.text-xs, li.text-xs, p.text-sm, li.text-sm,
   .text-xs > p, .text-xs > li, .text-sm > p, .text-sm > li,
   .text-xs > ul > li, .text-sm > ul > li {
-    font-size: 0.9375rem !important; /* 15px */
-    line-height: 1.65 !important;
+    font-size: 1rem !important; /* 16px */
+    line-height: 1.7 !important;
   }
 
   /* Small card titles (was 12px / 14px) */
   h3.text-xs, h4.text-xs, h5.text-xs {
-    font-size: 0.875rem !important; /* 14px */
-    line-height: 1.35 !important;
+    font-size: 0.9375rem !important; /* 15px */
+    line-height: 1.4 !important;
   }
   h3.text-sm, h4.text-sm, h5.text-sm {
-    font-size: 1rem !important; /* 16px */
-    line-height: 1.35 !important;
+    font-size: 1.125rem !important; /* 18px */
+    line-height: 1.4 !important;
   }
 
   /* Form fields, links & buttons (was 12px) */
   a.text-xs, button.text-xs, label.text-xs,
   input.text-xs, select.text-xs, textarea.text-xs {
-    font-size: 0.8125rem !important; /* 13px */
+    font-size: 0.875rem !important; /* 14px */
   }
 
   /* Tiny labels / badges (was 10px / 11px) */
   .text-\[10px\], .text-\[11px\] {
-    font-size: 0.75rem !important; /* 12px */
+    font-size: 0.8125rem !important; /* 13px */
   }
 }
 
