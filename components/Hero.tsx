@@ -54,7 +54,7 @@ export default function Hero() {
               </p>
 
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left]">
-                Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading banks and Non-Banking Financial Companies (NBFCs).
+                Credtree Financial Services is a comprehensive financial solutions firm with over 20 years of expertise in the finance industry, serving as a trusted channel partner for multiple leading insurance companies,banks and Non-Banking Financial Companies (NBFCs).
               </p>
 
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left] [text-wrap:pretty]">
@@ -62,7 +62,7 @@ export default function Hero() {
               </p>
 
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal text-justify ![text-align:justify] ![text-align-last:left]">
-                From loans and insurance to credit cards, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
+                From loans to credit cards,insurance, mutual funds and other financial solutions, we provide access to a diverse portfolio through our network of reputed financial institutions and product providers.
               </p>
             </div>
 

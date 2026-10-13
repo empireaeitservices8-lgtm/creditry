@@ -111,7 +111,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-ivory text-charcoal-900 font-sans antialiased selection:bg-gold-700 selection:text-white flex flex-col justify-between">
         {/* Fixed Header on all pages */}
         <Navbar />
-        <main className="flex-1 pt-[68px] sm:pt-[76px] lg:pt-[84px]">
+        <main className="flex-1 pt-[88px] sm:pt-[116px] lg:pt-[136px]">
           {children}
         </main>
         <Footer />
